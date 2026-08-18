@@ -1,0 +1,151 @@
+<template>
+  <div class="page">
+    <div class="mask">
+      <div class="userSelector">
+        <text class="title">用户协议及隐私保护</text>
+        <text class="content">
+          感谢您使用精美壁纸!我们非常重视您的个人信息和隐私保护，在您使用前请务必审阅精美壁纸<a
+            class="link"
+            href="/my/userAgreement"
+            >《用户协议》</a
+          >及<a
+            class="link"
+            href="my/primary"
+            >《隐私政策》</a
+          >内的所有条款，我们会遵循隐私政策收集、使用信息。</text
+        >
+        <div class="interacter">
+          <text class="interacterBtn no" @click="reject">不同意</text>
+          <text class="interacterBtn yes" @click="agree">同意并继续</text>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import ad from '@service.ad'
+
+export default {
+    data: {
+        isShowGetRight: false,
+        loading: false,
+        isShowPop: false,
+        isAgree: false,
+        showMenubar: false,
+        provider: 'huawei',
+        linkId: 1,
+        pathid: 1,
+    },
+    onInit() {
+        // start页面初始化channel渠道，区分在参
+        this.provider = ad.getProvider() || 'xiaomi'
+        setGlobalData('provider', this.provider)
+    },
+
+
+    reject() {
+        this.$app.exit()
+    },
+    agree() {
+        // $utils.initDeviceInfo()
+       
+        this.$emit('handleargeen')
+        // $utils.router.replace({ uri: '/Index' })
+        // setTimeout(() => { $utils.router.replace({ uri:'/Index' }) },200)
+    }
+}
+</script>
+<style lang="less">
+@import '../assets/styles/style.less';
+.page {
+  flex: 1;
+  position: relative;
+  justify-content: center;
+  background-image: url('https://static.zhonglian.com/upload/200033/2024/06/28/10/29314903acad9e942e155481004cfcbb.png');
+  background-size: cover;
+
+  .behavior {
+    width: 100%;
+  }
+
+  .bottomLogo {
+    align-items: center;
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    justify-content: center;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+  .info {
+    flex-direction: column;
+    .appName {
+      font-size: 60px;
+      font-weight: bold;
+      color: black;
+    }
+    .appDes {
+      font-size: 25px;
+    }
+  }
+}
+.mask {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.userSelector {
+  background-color: white;
+  width: 550px;
+  flex-direction: column;
+  padding: 50px 20px;
+  border-radius: 20px;
+  .title {
+    font-size: 34px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+  .content {
+    font-size: 26px;
+    color: black;
+    margin-top: 40px;
+    line-height: 44px;
+  }
+  .interacter {
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  .interacterBtn {
+    font-size: 34px;
+    width: 250px;
+    font-weight: bold;
+    color: black;
+    height: 90px;
+    border-radius: 80px;
+    text-align: center;
+  }
+  .no {
+    border: 1px solid #c0c0c0;
+  }
+  .yes {
+    background-color: #1046c4;
+    color: white;
+  }
+  .link {
+    color: #1046c4;
+    text-decoration: underline;
+  }
+}
+</style>

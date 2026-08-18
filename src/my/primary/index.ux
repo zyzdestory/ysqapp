@@ -1,0 +1,822 @@
+<template>
+  <div class="privacy-wrapper">
+    <!-- 标题 -->
+    <text class="main-title">隐私政策</text>
+
+    <!-- 目录 -->
+    <div class="toc">
+      <text class="toc-title">目录</text>
+      <text class="toc-item">一、 重要提示</text>
+      <text class="toc-item">二、 引言</text>
+      <text class="toc-item">三、 特别声明</text>
+      <text class="toc-item">四、 我们收集的信息类型及使用目的</text>
+      <text class="toc-item">五、 我们如何使用Cookie和同类技术</text>
+      <text class="toc-item">六、 如何访问和控制您的信息</text>
+      <text class="toc-item">七、 我们如何共享您的信息</text>
+      <text class="toc-item">八、 我们如何保留、存储和保护您的信息</text>
+      <text class="toc-item">九、 我们如何保护未成年人的信息</text>
+      <text class="toc-item">十、 有关共享信息的提示</text>
+      <text class="toc-item">十一、 有关敏感个人信息的提示</text>
+      <text class="toc-item">十二、 广告</text>
+      <text class="toc-item">十三、 我们向您发送的邮件和信息</text>
+      <text class="toc-item">十四、 我们服务中的第三方服务</text>
+      <text class="toc-item">十五、 本《隐私政策》的适用范围</text>
+      <text class="toc-item">十六、 本《隐私政策》的修改</text>
+      <text class="toc-item">十七、 适用法律</text>
+      <text class="toc-item">十八、 联系方式</text>
+    </div>
+
+    <!-- 一、重要提示 -->
+    <div class="section">
+      <text class="section-title">一、【重要提示】</text>
+      <text class="sub-title">（一）版本期限</text>
+      <text class="body-text">发布时间：2026年07月07日</text>
+      <text class="body-text">更新日期：2026年07月07日</text>
+      <text class="body-text">生效日期：2026年07月07日</text>
+      <text class="body-text">产品名称：{{productname}}</text>
+      <text class="body-text">开发者：武汉火炎科技有限公司</text>
+      <text class="sub-title">（二）版本更新说明</text>
+      <text class="body-text"
+        >武汉火炎科技有限公司十分重视对用户个人信息和隐私权益、数据安全的保护，我们将严格遵守法律法规要求采取相应的安全保护措施，致力于保护您的个人信息安全可控，并定期自查对用户个人信息和其他信息及数据安全的保护措施。</text
+      >
+      <text class="body-text"
+        >基于此，我们按照《中华人民共和国网络安全法》、《中华人民共和国数据安全法》、《中华人民共和国个人信息保护法》及相关法律法规的规定对隐私政策进行调整，我们可能不时修改本《隐私政策》，因此我们鼓励您经常查看本《隐私政策》，以便对任何修订内容始终保持了解，帮助您充分了解在使用我们产品和/或服务的过程中我们会如何收集、使用、共享、存储和保护您的个人信息以及您可以如何管理您的个人信息，以便您更好地作出适当的选择。更新后的隐私政策，我们将以显著、适当的方式（如站内信息、系统通知/提示等）告知并送达您，请您收到我们的提示后全面认真地阅读并理解更新版本，<text
+          class="strong-em-underline"
+          >特别应重点阅读我们以</text
+        >【<text class="strong">粗体</text>/<text class="underline">下划线</text
+        >/<text class="em-underline">斜体</text>】<text
+          class="strong-em-underline"
+          >标识的条款</text
+        >，确保您充分理解和同意之后再开始使用。</text
+      >
+      <text class="body-text"
+        >若您对本《隐私政策》的更新内容存在任何疑问、异议、意见或建议，您可通过本《隐私政策》中【十八、联系方式】联系我们；如您不同意修改后的隐私政策，请立即停止使用所有相关的产品和/或服务；<text
+          class="strong-underline"
+          >如您继续使用我们的产品及接受我们的服务，访问、浏览和/或使用我们的网站和/或任何产品和/或服务，参与我们开展的任何活动，将被视为您已充分理解并同意接受修改后的本《隐私政策》</text
+        >，我们将按照更新版本执行。</text
+      >
+      <text class="body-text"
+        >（三）您同意武汉火炎科技有限公司的《隐私政策》的行为表示您已了解武汉火炎科技有限公司的产品和/或提供的功能以及功能运行所需的必要个人信息，并给予相应的收集使用授权。</text
+      >
+    </div>
+
+    <!-- 二、引言 -->
+    <div class="section">
+      <text class="section-title">二、【引言】</text>
+      <text class="body-text"
+        >本《隐私政策》是您（或称"用户"，指注册、登录、使用、浏览本服务的个人或组织）与武汉火炎科技有限公司（注册地址：中国（广西）自由贸易试验区南宁片区社鹃路10号汇通产业园A1栋210号）及其关联公司（在本《隐私政策》中统称"武汉火炎"）及其运营合作单位（以下简称"合作单位"，与"武汉火炎"合称"我们"）之间关于与武汉火炎产品（以下简称"本软件"，包括但不限于酷爱答题等）和扩展服务所适用的政策。<text
+          class="strong"
+          >对于特定产品和/或服务，我们将另行制订的特定隐私政策，特定产品和/或服务的隐私政策系本《隐私政策》的重要组成部分，如本《隐私政策》与特定隐私政策存在不一致之处，则以特定隐私政策为准。</text
+        ></text
+      >
+    </div>
+
+    <!-- 三、特别声明 -->
+    <div class="section">
+      <text class="section-title">三、【特别声明】</text>
+      <text class="body-text"
+        >武汉火炎十分重视对用户的个人信息和隐私权的保护，本《隐私政策》说明了有关我们如何<text
+          class="strong"
+          >处理（包括收集、存储、使用、提供、共享、删除等）</text
+        >您在使用武汉火炎产品和/或服务（包括但不限于酷爱答题的快应用程序及微信小程序、网站以及武汉火炎随技术发展出现的新形态等向您提供的各项产品和/或服务）时披露的个人信息和其他信息，以及我们为您提供的<text
+          class="strong"
+          >访问、更新、删除、控制和保护上述信息的方式。</text
+        ></text
+      >
+      <text class="body-text strong"
+        >本《隐私政策》与您在使用武汉火炎的产品和/或服务息息相关，本《隐私政策》中涉及的相关技术词汇，我们将通过显著、清晰、易懂的方式【粗体/<text
+          class="underline"
+          >下划线</text
+        >/<text class="em-underline">斜体</text
+        >】向您解释，如有必要的，我们将提供相关说明链接，便于您透彻理解。请您务必在使用武汉火炎产品和/或服务之前，认真完整地阅读并理解我们的《隐私政策》。</text
+      >
+      <text class="body-text"
+        >我们非常重视并致力于保护18周岁以下未成年人（以下简称"未成年人"）隐私安全，并且无意收集未成年人的个人信息，但是由于生日并不是本软件用户必须真实提供的信息，在某些情况下，我们无法识别用户的年龄。因此，<text
+          class="strong-underline"
+          ><text class="em-underline"
+            >除非征得监护人的同意，未成年人请不要下载、注册本软件或向我们提供自己的姓名、联系地址、电话等个人信息。</text
+          ><text class="em-underline"
+            >如您是18周岁以下的未成年用户，在使用我们的产品和服务前，应事先取得您的监护人的书面同意。</text
+          ></text
+        >若您是未成年用户的监护人，当您对您所监护的未成年人的个人信息有相关疑问时，请通过本《隐私政策》中【十八、联系方式】与我们联系。</text
+      >
+      <text class="body-text"
+        >如您是<text class="strong-em-underline"
+          >已满14周岁但未满18周岁的未成年用户</text
+        >，请您确保您<text class="strong-em-underline"
+          >阅读本《隐私政策》及确认的行为系在您的监护人的指导下完成且征得您的监护人的同意，确保您使用我们的产品和/或服务与进行交易时的安全</text
+        >。</text
+      >
+      <text class="body-text strong"
+        >如您在首次进入武汉火炎产品和/或服务时，点击<text class="em-underline"
+          >"同意并继续"</text
+        >，则视为您<text class="em-underline">同意使用</text
+        >武汉火炎产品和/或服务，且您<text class="em-underline"
+          >已经完全理解并同意</text
+        >本《隐私政策》的全部内容，表示您同意我们按照本《隐私政策》处理（包括收集、使用、存储和共享等）您的信息。</text
+      >
+    </div>
+
+    <!-- 四、收集信息类型 -->
+    <div class="section">
+      <text class="section-title">四、【我们收集的信息类型及使用目的】</text>
+      <text class="sub-title">（一）个人信息类型及授权说明</text>
+      <text class="body-text"
+        >【个人信息】个人信息是指以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。</text
+      >
+      <text class="body-text"
+        >【个人敏感信息】个人敏感信息是指一旦泄露、非法提供或滥用可能危害人身和财产安全，极易导致个人名誉、身心健康受到损害或歧视性待遇等的个人信息，包括身份证件号码、个人生物识别信息、个人健康生理信息、银行账号、征信信息、交易和消费记录、行踪轨迹、住宿信息、通信记录和内容等。</text
+      >
+      <text class="body-text"
+        >为实现向您提供我们产品或服务的基本功能，您须授权我们收集、使用的必要的信息。如您拒绝提供相应信息，您将无法正常使用我们的产品及/或服务；<text
+          class="em-underline"
+          >如涉及到需要收集您敏感个人信息的业务场景时，我们将以显著、清晰的方式提示、告知您，</text
+        ><text class="strong-em-underline"
+          >如您点击"同意"或勾选"√"的，则视为您已同意授权我们收集您的相关敏感个人信息</text
+        >。</text
+      >
+      <text class="body-text"
+        >我们为您提供服务时，将遵循合法、正当、必要和诚信原则、目的明确原则及公开透明原则，<text
+          class="strong"
+          >仅收集实现产品功能所必要的与您有关的个人信息和其他信息，</text
+        >用以向您提供服务、提升我们的服务质量、保障您的账户安全以及遵循国家法律法规及监管规定。</text
+      >
+      <text class="body-text strong"
+        >您已知晓，如果您不提供相关必要信息，可能无法注册成为我们的用户、享受我们提供的对应服务，得到最优质的用户体验。同时，您也认可，该结果并非我们有意的限制或主动降低服务质量。</text
+      >
+      <text class="body-text"
+        ><text class="strong-em-underline"
+          >如您选择使用了本《隐私政策》和/或相关用户协议说明当中尚未涵盖的其他服务，基于该服务我们需要收集您的信息的，我们会通过页面提示、交互流程、协议约定的方式另行向您说明信息收集的范围与目的，并征得您的同意。</text
+        >我们会按照本《隐私政策》以及相应的用户协议约定使用、存储、共享及保护您的信息，<text
+          class="strong"
+          >如您拒绝提供相应信息，您将无法正常使用相关附加功能或无法达到我们拟达到的功能效果，但不会影响您使用我们的基本功能</text
+        >。</text
+      >
+      <text class="body-text"
+        >我们不会主动从武汉火炎及合作单位以外的第三方获取您的个人信息。<text
+          class="strong-em-underline"
+          >如为向您提供更完善、更多样化的产品功能和/或服务而需从第三方间接获取您个人信息，我们会在获取前向您明示个人信息来源、类型及使用范围</text
+        >。</text
+      >
+
+      <text class="sub-title">（二）无需授权同意的情形</text>
+      <text class="body-text strong"
+        >您知悉理解并同意，如有下列情形之一的，我们未经您的授权同意便可处理您的个人信息：</text
+      >
+      <text class="body-text strong"
+        >1、为订立、履行您作为一方当事人的合同所必需；</text
+      >
+      <text class="body-text strong"
+        >2、为我们履行法定职责或法定义务所必需；</text
+      >
+      <text class="body-text strong"
+        >3、为应对突发公共卫生事件，或者紧急情况下为保护您或其他自然人的生命健康安全和财产安全所必需；</text
+      >
+      <text class="body-text strong"
+        >4、为公共利益实施新闻报道、舆论监督等行为，在合理范围内处理您的个人信息；</text
+      >
+      <text class="body-text strong"
+        >5、依照相关法律规定在合理的范围内处理您自行公开或其他已经合法公开的您的个人信息；</text
+      >
+      <text class="body-text strong">6、法律、行政法规规定的其他情形。</text>
+
+      <text class="sub-title">（三）具体收集场景、目的、范围</text>
+      <text class="body-text"
+        >我们会逐一说明我们收集的个人信息类型及其对应的用途，以便您了解我们针对某一特定功能所收集的具体个人信息的类别、用途及收集方式。<a
+          href="https://usu.nnchenxin.cn/jhome/list.html"
+          >武汉火炎产品收集个人信息明示清单</a
+        ></text
+      >
+      <text class="body-text"
+        >位置权限、摄像头、相册权限等敏感权限，均不会默认开启，仅在获得您的授权后才会为实现特定功能时使用，您也可以撤回授权，在您的应用内管理相应权限。<a
+          href="https://usu.nnchenxin.cn/jhome/permissions.html"
+          >武汉火炎产品权限申请与使用情况说明</a
+        ></text
+      >
+
+      <text class="body-text strong"
+        >我们仅会出于以下合法目的或功能，收集和使用您的个人信息及其他信息：</text
+      >
+      <text class="body-text strong"
+        >1、在您使用产品和/或服务过程中可能收集的信息。</text
+      >
+      <text class="body-text strong"
+        >我们可能会收集关于您使用产品和/或服务（包括使用方式）过程中产生的信息，您须授权我们收集。如您拒绝提供，您将无法正常使用我们的产品和/或服务，此类信息包括：</text
+      >
+      <text class="body-text strong"
+        >（1）【设备信息】：为了保障您正常使用本产品和/或服务，以及保障您的账号安全，我们会收集设备属性信息（包括您的硬件型号、操作系统版本、网络设备硬件地址MAC、Android
+        ID、设备硬件序列号、OAID、国际引动设备标识码IMEI、国际移动用户识别码IMSI），设备连接信息（电信运营商、使用的语言）。</text
+      >
+      <text class="body-text strong"
+        >（2）【日志信息】：为了保障您安全使用本产品和/或服务，我们的服务器可能会自动记录一些信息，包括您对我们的产品和/或服务的使用情况、IP地址和使用的语言、下载、安装或使用本软件的信息以及访问服务的日期、时间、服务日志信息（包括服务故障信息）。请您注意，上述信息不包括您可能通过使用相关应用程序、服务或网站发送或共享的内容。同时，我们也会对信息采取加密处理，保证信息的安全性。</text
+      >
+
+      <text class="body-text strong"
+        >2、您在使用特定产品和/或服务时可能需要向我们提供的信息</text
+      >
+      <text class="body-text strong"
+        >如您使用武汉火炎产品提供的特定的产品和/或服务,为满足您的产品和/或服务需求，根据您选择的产品和/或服务，您须同意向我们提供相应的信息。请您注意，如您不选择使用特定产品和/或服务，则无需提供相应信息，且不会影响您使用已选择的其他特定产品和/或服务。</text
+      >
+      <text class="body-text strong"
+        >（1）为了向您提供书架及阅读记录功能服务，我们可能会获取您的设备权限及存储读写权限，用于将你的阅读记录与账户关联。</text
+      >
+      <text class="body-text strong"
+        >（2）如果您使用涉及账号信息的相关等功能，则需要注册/登录（登录即代表您注册成为本软件用户）本软件，我们将根据您注册/登录的方式，收集以下个人信息：</text
+      >
+      <text class="body-text strong"
+        >手机号码和密码（我们使用了不可逆的加密技术，且无法访问该信息）和设备信息（IMEI/MAC/Android
+        ID/IDFA/OpenUDID/GUID/SIM 卡 IMSI 信息)
+        ，手机号码和密码是您选择使用手机号码注册/登录时，主动向我们提供的个人信息。同时，您还可以选择第三方服务商提供的发送短信验证码的方式来验证您的身份是否有效。验证码的验证方式为您手动输入接收到的验证码。</text
+      >
+      <text class="body-text strong"
+        >如果您不提供这些信息，则您无法注册/登录本软件，且无法使用需注册/登录的功能，但不会影响您正常使用无需注册/登录的功能。</text
+      >
+      <text class="body-text"
+        >（3）登录应用之后，您可以选择完善您的个人资料，<text class="strong"
+          >一旦您选择、编辑、填写了您的相关个人信息，就视为您在完全知情的基础上自主的、具体的、清晰明确的表示同意向我们提供，请您谨慎提供。</text
+        >您可以完善的个人资料包括<text class="strong-underline"
+          >更换头像、更改昵称、选择性别、生日</text
+        >。</text
+      >
+      <text class="body-text strong"
+        >（4）为了能够便于您及时<text class="underline">升级APP</text
+        >体验更新功能，我们可能会获取您的<text class="underline"
+          >应用安装权限</text
+        >，以便您选择是否升级到最新版本。</text
+      >
+      <text class="body-text strong"
+        >对于上述移动终端授权，如果您不同意授权，则无法使用本软件的相应功能和服务。随着本软件功能进一步丰富，后续新增功能如涉及获取用户授权权限时，我们将在您授权同意后才会获取该功能所需权限。如未取得您的授权，我们将不会收集和使用相关信息。如我们使用您的个人信息，超出了您所授权的目的及具有直接或合理关联的范围，我们将在使用您的个人信息前，再次向您告知并征得您的明示同意。</text
+      >
+    </div>
+
+    <!-- 五、Cookie -->
+    <div class="section">
+      <text class="section-title">五、【我们如何使用Cookie和同类技术】</text>
+      <text class="body-text strong"
+        >当您使用我们的产品及/或服务时，我们和第三方合作伙伴可能通过cookies和web
+        beacon收集、标识和存储您访问、使用本产品时的信息，并将该等信息存储为日志信息。此等技术帮助我们更好地了解您的行为(包括出于安全和防欺诈的目的)，告诉我们您浏览了我们产品的哪些部分，衡量广告和网络搜索的效果并加以改善。</text
+      >
+      <text class="body-text strong"
+        >（一）用户认证：cookie通知我们您何时登入我们的产品/服务，以便我们提供适合您的服务和体验。</text
+      >
+      <text class="body-text strong"
+        >适用场景说明：当您开启本软件时，cookie会通知我们，让我们识别您是否已安全地登入该产品/服务，并显示仅与您有关的资料。</text
+      >
+      <text class="body-text strong"
+        >（二）记录您的喜好设定：cookie能够记录您的个人设定，有助我们提供切合您个人需要的服务。</text
+      >
+      <text class="body-text strong"
+        >适用场景说明：我们使用cookie来记录您是否已阅读我们向您推送的内容或提示，以免重发，并有助存储您的参数设定（如消息推送开关），当您再使用有关服务时，可以自动调节到您的喜好设定。</text
+      >
+      <text class="body-text strong"
+        >（三）账户数据安全：我们使用cookie来保护您的个人信息和我们的服务安全性，并防止欺诈、刑事或其他涉嫌的犯罪行为。</text
+      >
+      <text class="body-text strong"
+        >适用场景说明：cookie可以识别您是否在我们的正常位置登入我们的服务，并且防止您的数据被盗用，识别偷窃行为。</text
+      >
+      <text class="body-text strong"
+        >（四）提高效率：我们使用这些cookie来提升我们的服务速度、表现和效率。</text
+      >
+      <text class="body-text strong"
+        >适用场景说明：这些cookie促进服务器之间的路由器信息流通，并核查不同用户使用我们的服务时的登载速度。我们有时亦可用cookie在您的客户端本地暂存数据，从而加快您使用我们的服务时的登载和响应速度。</text
+      >
+      <text class="body-text strong"
+        >（五）分析和研究：我们使用cookie来跟进我们的服务表现和提升服务水平，cookie也为我们提供了研发新功能的参考数据。</text
+      >
+      <text class="body-text strong"
+        >适用场景说明：cookie让我们对如何使用我们的服务有更深入的认识，因此有助我们提升您和其他用户的体验。此类数据包括您登入我们的服务时于每一程序所耗用的时间、您使用我们的服务时进行了什么程序，以及您使用我们的服务时曾经查阅哪些网页和使用了什么功能。</text
+      >
+      <text class="body-text strong"
+        >（六）改善广告宣传。我们使用cookie来改善广告宣传，确保这些服务切合您所需。</text
+      >
+      <text class="body-text strong"
+        >适用场景说明：cookie让我们显示更适合您的宣传信息，并追踪您是否已在我们的服务内阅读广告宣传及继而进入相应广告商的网页，以此来统计广告的点击量，作为我们与广告商结算的依据之一。</text
+      >
+      <text class="body-text strong"
+        >我们为上述目的使用cookies和web beacon的同时，可能将通过cookies和web
+        beacon收集的非个人身份信息汇总提供给广告商和其他伙伴，用于分析您和其他用户如何使用我们的服务并用于广告服务。</text
+      >
+      <text class="body-text"
+        >我们的产品和服务上可能会有广告商和其他合作方放置的cookies和web
+        beacon。<text class="strong"
+          >这些cookies和web
+          beacon可能会收集与您相关的非个人身份信息，以用于分析用户如何使用该等服务、向您发送您可能感兴趣的广告，或用于评估广告服务的效果。<text
+            class="underline"
+            >本《隐私政策》不用于解释第三方如何定义、收集或使用该等信息。这些第三方cookies和web
+            beacon收集和使用该等信息不受本《隐私政策》约束，而是受到其自身的隐私政策约束，我们不对第三方的cookies或web
+            beacon承担责任</text
+          >。我们建议您在互动之前先阅读他们的隐私政策，了解您的隐私权。</text
+        ></text
+      >
+      <text class="body-text"
+        >如果您不希望我们使用cookie，我们也为您提供了停用cookie的方法。您可以通过手机系统设置清除手机上保存的cookie。如果您清除了手机上保存的cookie，这将导致我们无法为您提供完整的产品/服务。同时，您仍然将收到同样数量的广告，只是这些广告与您的相关性会降低。</text
+      >
+      <text class="body-text"
+        >我们通常将使用这些cookie和同类技术收集的数据视为非个人信息。但是，如果当地法律将互联网协议(IP)地址或类似识别标记视为个人信息，则我们亦将此等识别标记视为个人信息。此外，我们有时会将通过这些技术收集的非个人信息与我们持有的其他个人信息合并。当我们以这种方式合并信息后，出于本《隐私政策》的目的，我们会将合并后的信息视为个人信息。</text
+      >
+    </div>
+
+    <!-- 六、访问和控制 -->
+    <div class="section">
+      <text class="section-title">六、【如何访问和控制您的信息】</text>
+      <text class="body-text strong"
+        >我们将尽量采取适当的技术手段，保证您可以访问、更新、更正和删除您的注册信息或使用我们的服务时提供的其他个人信息。在访问、更新、更正和删除您的个人信息时，我们可能会要求您进行身份验证，以保障您的账号安全。</text
+      >
+      <text class="body-text strong">（一）查询个人信息</text>
+      <text class="body-text strong"
+        >您可在"我的"（Android系统）点击头像图标，查询您的头像、昵称、性别、生日、地区。</text
+      >
+      <text class="body-text strong">（二）更正个人信息</text>
+      <text class="body-text strong"
+        >可在"我的"页面点击用户头像进入个人信息设置页更正您的头像、昵称、个性签名、性别、生日。</text
+      >
+      <text class="body-text strong">（三）删除个人信息</text>
+      <text class="body-text strong"
+        >您可以基于以下事由请求我们删除您的个人信息：</text
+      >
+      <text class="body-text strong"
+        >1、如果我们处理个人信息的行为违反法律法规；</text
+      >
+      <text class="body-text strong"
+        >2、如果我们收集、使用您的个人信息，却未征得您的同意；</text
+      >
+      <text class="body-text strong"
+        >3、如果我们处理个人信息的行为违反了与您的约定；</text
+      >
+      <text class="body-text strong">4、如果您决定撤回授权/同意；</text>
+      <text class="body-text strong">5、法律、行政法规规定的其他情形。</text>
+      <text class="body-text strong"
+        >您可以点击页面右下角"我的"-"设置"图标-帮助反馈中基于上述事由请求删除您的个人信息。</text
+      >
+      <text class="body-text strong">（四）撤回您的授权</text>
+      <text class="body-text"
+        >对于我们基于您的同意所收集的您的个人信息，您可以随时给予或撤回您的授权同意。您可以通过删除信息、关闭设备功能等方式变更您授权我们继续收集您个人信息的范围或撤回您的授权，或者通过本《隐私政策》列明的联系方式联系我们做此操作。您也可以通过注销账户的方式，撤回我们继续收集您个人信息的全部授权。<text
+          class="strong"
+          >但请注意，对于部分类型的个人信息，例如为实现我们的产品和/或服务的基本功能所必需的信息或者我们履行适用法律法规规定的义务所必需的信息，我们可能无法响应您撤回同意或授权的请求。</text
+        >除该等我们无法响应的情况以外，当您撤回同意或授权后，我们将不再处理相应的个人信息，<text
+          class="strong-underline"
+          >但您撤回同意或授权的决定，不会影响我们此前基于您的同意或授权已进行的个人信息处理活动</text
+        >。此外，您可以通过以下方式对单个授权权限进行查看和撤回：</text
+      >
+      <text class="body-text strong"
+        >1.取消其他功能授权：您可以通过系统设置-应用权限中选择关闭地理位置权限、相机权限、相册权限、短信权限、电话权限（即设备信息权限），以此来撤回您的授权。</text
+      >
+      <text class="body-text strong"
+        >请您理解，每个业务功能需要一些基本的个人信息才能得以完成，当您撤回同意或授权后，我们可能无法继续为您提供被撤回同意或授权部分个人信息所对应的服务和功能，也不再处理您相应的个人信息。但您撤回同意或授权的决定，不会影响此前基于您的授权而开展的个人信息处理。</text
+      >
+      <text class="body-text strong">（五）注销账户</text>
+      <text class="body-text"
+        >您可以通过以下方式申请注销账号，一旦您注销本软件账号，将无法使用我们所有用户产品的服务，因此请您谨慎操作。</text
+      >
+      <text class="body-text strong">申请注销时，请您务必确认如下内容：</text>
+      <text class="body-text em"
+        >1、您已备份相关账号信息和数据或自动放弃以上账号关联的所有账户权益；</text
+      >
+      <text class="body-text em"
+        >2、注销账号后，您将无法使用本账号任何信息（包括但不限于个人资料、用户信息以及金币、奖励等活动余额）；</text
+      >
+      <text class="body-text em"
+        >3、注销一旦申请将无法撤回，系统会在1个工作日内审核并处理完成；</text
+      >
+      <text class="body-text em"
+        >4、您注销账号并不代表本账号注销前的账号行为和相关责任得到豁免或减轻。</text
+      >
+      <text class="body-text"
+        >您可以点击页面右下角<text class="strong"
+          >"我的"-账号注销-账号中心以提交注销账号申请。</text
+        >当您成功注销账户后，我们将采取相应的删除、匿名化措施处理您的信息。</text
+      >
+      <text class="body-text strong-underline"
+        >请您理解，由于技术所限、法律或监管要求，我们可能无法满足您的所有要求，我们会在合理的期限内答复您的请求。</text
+      >
+    </div>
+
+    <!-- 七、共享信息 -->
+    <div class="section">
+      <text class="section-title">七、【我们如何共享您的信息】</text>
+      <text class="body-text"
+        >除以下情形及相关法律规定外，未经您同意，我们以及我们的关联公司不会与任何第三方共享您的个人信息：</text
+      >
+      <text class="body-text"
+        >●<text class="strong"
+          >我们以及我们的关联公司可能将您的个人信息与我们的关联公司、合作伙伴及第三方服务供应商、承包商及代理（例如代表我们发出电子邮件或推送通知的通讯服务提供商、以及为我们提供位置数据的地图服务供应商）共享（他们可能并非位于您所在法域），用作下列用途：</text
+        ></text
+      >
+      <text class="body-text strong">1、向您提供我们的服务；</text>
+      <text class="body-text strong"
+        >2、实现"我们如何使用您的信息"部分所述目的；</text
+      >
+      <text class="body-text strong"
+        >3、履行我们在《用户协议》或本《隐私政策》中的义务和行使我们的权利；</text
+      >
+      <text class="body-text strong"
+        >4、为了向您提供更完善、优质的产品和服务，我们可能会委托第三方服务提供商帮助我们提供相关的运营和服务的支持。在此过程中，我们将可能会委托处理、与第三方共享、向第三方转移或披露您的某些个人信息，以实现我们的产品和/或服务的功能，提供更好的客户服务和用户体验。但我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息，并且只会共享提供服务所必要的个人信息。同时，我们会与合作伙伴签署严格的保密协定，要求他们按照我们的说明、本《隐私政策》以及其他任何相关的保密和安全措施来处理您的个人信息。我们的合作伙伴无权将共享的个人信息用于任何其他用途。如果您拒绝我们的合作伙伴在提供服务时收集为提供服务所必须的个人信息，将可能导致您无法在我们的平台中使用该第三方服务。</text
+      >
+      <text class="body-text">我们的合作伙伴有如下几类：</text>
+      <text class="body-text"
+        >（1）<text class="strong">我们平台的第三方商家：</text
+        >为实现您购买产品或服务的需求（包括享受售后服务），我们会将您的订单信息与交易相关的信息共享给我们平台的第三方商家，可能包括<text
+          class="strong"
+          >：1)短信发送服务提供商；2)软件、系统技术服务提供商；3)营销和研究、数据分析服务提供商；4)地图服务提供商；5)发票服务提供商；6)网站/系统服务器托管服务提供商。</text
+        ></text
+      >
+      <text class="body-text"
+        >（2）<text class="strong">第三方SDK、API类服务商：</text
+        >我们的产品中可能会包含第三方SDK或其他类似的应用程序，如您在我们平台上使用这类由第三方提供的服务时，您同意将由其直接收集和处理您的信息（如以嵌入代码、插件等形式），第三方SDK服务商可能会收集您相关的个人信息，<text
+          class="strong"
+          >详细情况请查阅<a
+            class="link"
+            href="https://staticimg.wlanbanlv.com/privacypolicy/20396/sdk.html"
+            >《第三方SDK说明》</a
+          >。</text
+        ></text
+      >
+      <text class="body-text"
+        >前述服务商收集和处理信息等行为遵守其自身的隐私条款。为了最大程度保障您的信息安全，<text
+          class="strong-underline"
+          >我们建议您在使用任何第三方SDK类服务前先行查看其隐私条款。</text
+        >为保障您的合法权益，<text class="strong-underline"
+          >如您发现这等SDK、API或其他类似的应用程序存在风险时，建议您立即终止相关操作并及时与我们取得联系</text
+        >。</text
+      >
+      <text class="body-text"
+        >如我们或我们的关联公司与任何上述第三方共享您的个人信息，我们将努力确保该等第三方在使用您的个人信息时遵守本《隐私政策》及我们要求其遵守的其他适当的保密和安全措施。</text
+      >
+      <text class="body-text"
+        >5、随着我们业务的持续发展，我们以及我们的关联公司有可能进行合并、收购、资产转让或类似的交易，而您的个人信息有可能作为此类交易的一部分而被转移。<text
+          class="strong"
+          >我们将在您的个人信息转移前通知您，告知您接收方的名称或者姓名和联系方式，并确保您的个人信息将以符合本《隐私政策》的方式得到保护。接收方变更处理目的、处理方式的，我们将会要求相关数据接收方再次获得您的同意，并要求接收方继续履行保护您个人信息的义务。</text
+        ></text
+      >
+      <text class="body-text"
+        >6、我们还可能为以下需要保留、保存或披露您的个人信息：</text
+      >
+      <text class="body-text">(1)获得您明确同意后；</text>
+      <text class="body-text">(2)遵守适用的法律法规；</text>
+      <text class="body-text">(3)遵守法院判决、裁定或其他法律程序的规定；</text>
+      <text class="body-text"
+        >(4)遵守相关政府机关或其他法定授权组织的要求；</text
+      >
+      <text class="body-text"
+        >(5)为遵守适用的法律法规、维护社会公共利益、保护您及我们或我们的关联公司、我们的客户、其他用户或雇员的人身和财产安全或合法权益而向政府机构、监管机构和执法部门提供。</text
+      >
+    </div>
+
+    <!-- 八、保留存储保护 -->
+    <div class="section">
+      <text class="section-title"
+        >八、【我们如何保留、存储和保护您的信息】</text
+      >
+      <text class="sub-title">（一）保留</text>
+      <text class="body-text"
+        >我们遵守法律法规的规定，将境内收集的用户个人信息存储于中国境内，不会存在个人信息出境之情况。</text
+      >
+      <text class="sub-title">（二）存储</text>
+      <text class="body-text strong"
+        >我们仅在本《隐私政策》所述目的所必需期间和法律法规要求的时限内保留您的个人信息。我们进一步向您明确除在下列情况下，我们有可能因需符合法律要求，更改个人信息的存储时间外，我们将在您注销账号或您账号被回收之日起3个月内采取相应的删除、匿名化措施处理您的信息</text
+      >
+      <text class="body-text">●为遵守适用的法律法规等有关规定；</text>
+      <text class="body-text">●为遵守法院判决、裁定或其他法律程序的规定；</text>
+      <text class="body-text">●为遵守相关政府机关或法定授权组织的要求；</text>
+      <text class="body-text">●我们有理由确信需要遵守法律法规等有关规定；</text>
+      <text class="body-text"
+        >●为执行相关服务协议或本政策、维护社会公共利益，为保护我们的客户、我们或我们的关联公司、其他用户或雇员的人身财产安全或其他合法权益所合理必需的用途。</text
+      >
+      <text class="body-text strong"
+        >当我们的产品或服务发生停止运营的情形时，我们将采取推送通知、公告等形式通知您，并在合理的期限内删除或匿名化处理您的个人信息。</text
+      >
+      <text class="sub-title">（三）保护</text>
+      <text class="body-text strong"
+        >为了更好地保护您的个人信息安全，我们的应用产品已经取得信息系统安全等级保护第三级备案证明，且我们采取了符合业界标准的安全防护措施，以防您个人信息的丢失、不当使用、未经授权阅览或披露。具体保护措施如下：</text
+      >
+      <text class="body-text"
+        >1、为了进行身份鉴别，以便只有您登录才能够访问您的数据，我们会为您生成用户的唯一标志，当您使用手机号进行登录时（一键登录或短信验证码），除了为您生成用户唯一标志外，我们会将您的手机号码与该标志进行一对一绑定，倘若您的账号设置了密码，密码将采用经过多轮不可逆加密算法以及加盐的加密后存储到数据库的方式，以此来保证您的密码真实内容不被包括我们在内的他人看到。</text
+      >
+      <text class="body-text"
+        >2、我们对请求和响应内容本身做了安全级别高的，除此之外我们还将加密的内容使用了，以达到对您的数据传输安全性的有效保障；此外，您在使用App过程中可能产生的一些本地数据我们经过脱敏后保存在了数据库，对于部分数据内容同样做了加密，并在外层对数据库进行了高强度加密，以进一步保障您的数据安全。</text
+      >
+      <text class="body-text"
+        >3、我们团队对应用开发遵循开发规范，开发工具采用官方下载并做MD5文件校验，防止工具被篡改加入恶意代码；团队使用专业源码管理工具，记录所有代码变更，并且开发人员之间交叉代码审核，及时发现以及防止开发者产生恶意代码。</text
+      >
+      <text class="body-text"
+        >4、我们在版本开发完成后，Android应用都会采用国内顶尖的安全加固机制进行加固，iOS采用官方高强度加固机制进行加固，对加固后的安装包我们采用专业的App审计平台进行安全检测，在安全的情况下我们才会将安装包上架到相应市场上供用户下载，引入此安全审计以此提高用户使用的安全性。</text
+      >
+      <text class="body-text"
+        >5、在访问控制方面，为了保证我们应用为您提供正常服务，一些功能可能会涉及到访问您的隐私权限<text
+          class="strong-underline"
+          >（例如更换头像访问您的相册，离线阅读访问您的存储等）</text
+        >，我们访问这些数据前，都会显式的询问您，只有得到您的访问授权我们才会进行数据访问，提高您的隐私数据安全性。</text
+      >
+      <text class="body-text strong"
+        >但请您谅解，由于技术的限制以及风险防范的局限，即便我们已经尽量加强安全措施，也无法始终保证信息百分之百的安全。您需要了解，您接入我们的服务所用的系统和通讯网络，有可能因我们可控范围外的情况而发生问题。</text
+      >
+    </div>
+
+    <!-- 九、未成年人 -->
+    <div class="section">
+      <text class="section-title">九、【我们如何保护未成年人的信息】</text>
+      <text class="body-text"
+        >（一）我们将严格遵循《中华人民共和国个人信息保护法》、《中华人民共和国未成年人保护法》及《儿童个人信息网络保护规定》等法律法规的规定，秉持合法、正当、必要原则，处理未成年人的个人信息，坚持最有利于未成年人，保护未成年人的个人信息安全。</text
+      >
+      <text class="body-text"
+        >（二）未成年人的监护人应当加强对其监护对象对个人信息安全意识的培养，教育、引导并监督未成年人子女保护个人隐私权益，同时要提高自身的网络素养，规范自身使用网络的行为，合理安排未成年人子女使用网络的时间、防止未成年人子女沉迷网络，避免影响其身心健康。</text
+      >
+      <text class="body-text strong">（三）我们特别提示您：</text>
+      <text class="body-text strong">1、</text
+      ><text class="body-text"
+        >请您确保在使用我们的产品和/或服务时，已经全面、充分地阅读本《隐私政策》，并确保您对于使用的产品/服务的相关功能、内容已经充分了解并同意接受，如您对我们的产品和/或服务有任何疑问的，请您随时联系我们，我们将以清晰、易懂的方式为您解释。</text
+      >
+      <text class="body-text"
+        >2、我们非常重视对未成年人的个人信息保护。如您为未成年人，我们要求您请您的父母或其他监护人仔细阅读本政策，并在征得您的父母或其他监护人同意的前提下使用我们的服务或向我们提供信息。</text
+      >
+      <text class="body-text"
+        >为了更好地保护您的合法权益，我们可能会对您提供的信息情况进行审核，审核方式包括但不限于电话核实、视频验证，此时我们需要您启用相机/通话录音功能，但我们会事先征得您的同意。您已充分知悉并同意：在我们审核的过程中，您应当确保您向我们提供的信息是真实、有效、合法的，否则因您提供虚假信息而产生的全部法律责任和不利后果将由您个人承担，我们对此不负任何责任。</text
+      >
+    </div>
+
+    <!-- 十、共享信息提示 -->
+    <div class="section">
+      <text class="section-title">十、【有关共享信息的提示】</text>
+      <text class="body-text"
+        >我们的多项服务可让您不仅与您的社交网络、也与使用该服务的所有用户公开共享您的相关信息：</text
+      >
+      <text class="body-text"
+        >适用场景说明：您在我们的服务中所上传或发布的信息（包括您公开的个人信息、您建立的名单）、您对其他人上传或发布的信息作出的回应，以及包括与这些信息有关的位置数据和日志信息，使用我们服务的其他用户也有可能分享与您有关的信息（包括位置数据和日志信息）。</text
+      >
+      <text class="body-text"
+        >只要您不删除共享信息，有关信息便一直留存在公众领域，如您删除共享信息，我们将采取技术手段屏蔽您的个人信息，不受其他第三方存储。</text
+      >
+      <text class="body-text strong"
+        >因此，请您认真考虑您通过我们的服务上传、发布和交流的信息内容。</text
+      >
+      <text class="body-text"
+        >您可通过我们某些服务的隐私设定来控制有权浏览您的共享信息的用户范围。如您要求从我们的服务中删除您的个人信息，请通过该等特别服务条款提供的方式操作。</text
+      >
+      <text class="body-text strong"
+        >另外，需要特别提出的是，您充分了解并保证，在您通过"手机登录"等任何渠道方式登录或连接WiFi前，请您务必事先详细阅读《用户协议》及本《隐私政策》。在您首次启动使用本软件应用前，我们会弹出《用户协议》与《隐私政策》的说明及查看入口，您点击"同意"并继续即表示您已充分知悉且同意并严格遵守本《隐私政策》项下及《用户协议》的所有内容。</text
+      >
+    </div>
+
+    <!-- 十一、敏感信息 -->
+    <div class="section">
+      <text class="section-title">十一、【有关敏感个人信息的提示】</text>
+      <text class="body-text"
+        ><text class="strong">敏感个人信息</text>包括<text
+          class="strong-em-underline"
+          >生物识别、宗教信仰、特定身份、医疗健康、金融账户、行踪轨迹</text
+        >等信息。<text class="strong"
+          >本《隐私政策》中的"敏感个人信息"可能包括：个人电话号码、身份证件号码、个人生物识别信息、银行账号、财产信息、交易信息等个人信息。</text
+        >相比其他个人信息，敏感个人信息受到更加严格的保护。<text
+          class="strong-em-underline"
+          >如涉及到需要收集您敏感个人信息的业务场景时，我们将以显著、清晰、易懂的方式提示、告知您，如您点击"同意"或勾选"√"的，则视为您已同意授权我们收集您的相关敏感个人信息。</text
+        ></text
+      >
+      <text class="body-text strong"
+        >请注意，如您在我们的服务中所提供、上传或发布的内容和信息（例如有关您社交活动的照片或信息），可能会泄露您的敏感个人信息。您需要谨慎地考虑，是否使用我们的服务披露您的敏感个人信息</text
+      >
+      <text class="body-text strong"
+        >若您同意披露，则我们会将您的敏感个人信息按本《隐私政策》所述的目的和方式来处理并进行合理保护。</text
+      >
+    </div>
+
+    <!-- 十二、广告 -->
+    <div class="section">
+      <text class="section-title">十二、【广告】</text>
+      <text class="body-text"
+        >我们可能使用您的信息，向您提供与您更加相关的广告：</text
+      >
+      <text class="body-text"
+        >为了提升用户服务体验，为您推荐更为优质或适合的服务，<text
+          class="strong-underline"
+          >第三方可能会调取您的用户信息（国际移动设备识别码（IMEI）、国际移动用户识别码（IMSI）、MAC地址、用户设备软件安装列表）</text
+        >形成群体特征标签，通过我们的服务、电子邮件或其他方式向您发送您可能感兴趣的内容推荐、营销活动通知、商业性电子信息或广告，提供或推广我们或第三方的如下商品和服务：</text
+      >
+      <text class="body-text"
+        >●我们的商品和服务，以及我们的关联公司和合营伙伴的商品和服务，可能包括即时通讯服务、网上媒体服务、互动娱乐服务、社交网络服务、付款服务、互联网搜索服务、位置和地图服务、应用软件和服务、数据管理软件和服务、网上广告服务、互联网金融及其他社交媒体、娱乐、电子商务、资讯及通讯软件和服务（"互联网服务"）；</text
+      >
+      <text class="body-text"
+        >●第三方互联网服务供应商，以及与下列有关的第三方商品和服务：食物和餐饮、体育、音乐、电影、电视、现场表演和其他艺术和娱乐、书册、杂志和其他刊物、服装和配饰、珠宝、化妆品、个人健康和卫生、电子、收藏品、家用器皿、电器、家居装饰和摆设、宠物、汽车、酒店、交通和旅游、银行、保险及金融服务、会员积分和奖励计划，以及我们认为可能与您相关的其他商品和服务。</text
+      >
+      <text class="body-text strong"
+        >您理解并同意，我们有权决定将本软件作商业用途，包括但不限于开发、使用本软件的部分服务为第三方作推广等，我们承诺在推广过程中严格按照本协议约定保护您的个人信息，同时您亦可以根据系统设置选择屏蔽、拒绝接收相关推广信息。</text
+      >
+    </div>
+
+    <!-- 十三、邮件和信息 -->
+    <div class="section">
+      <text class="section-title">十三、【我们向您发送的邮件和信息】</text>
+      <text class="body-text strong">（一）邮件和信息推送</text>
+      <text class="body-text"
+        >您使用我们服务时，我们可能使用您的信息向您的设备发送电子邮件、新闻或推送通知。如您不希望收到这些信息，您可以按照我们向您发出的电子邮件所述指示，在设备上选择取消订阅。</text
+      >
+      <text class="body-text strong">（二）与服务有关的公告</text>
+      <text class="body-text"
+        >我们可能在必需时（例如当我们由于系统维护而暂停某一项服务时）向您发出与服务有关的公告。您可能无法取消这些与服务有关、性质不属于推广的公告。</text
+      >
+    </div>
+
+    <!-- 十四、第三方服务 -->
+    <div class="section">
+      <text class="section-title">十四、【我们服务中的第三方服务】</text>
+      <text class="body-text"
+        >我们的服务可能包括或链接至第三方提供的社交媒体或其他服务（包括网站）。</text
+      >
+      <text class="body-text"
+        >●您可利用"分享"键将某些内容分享到我们的服务，或您可利用第三方连接服务登录我们的服务。这些功能<text
+          class="strong"
+          >可能会收集您的信息（包括您的日志信息）</text
+        >，并可能在您的电脑装置cookies，从而正常运行上述功能；</text
+      >
+      <text class="body-text"
+        >●我们通过广告或我们服务的其他方式向您提供链接，使您可以接入第三方的服务或网站。</text
+      >
+      <text class="body-text"
+        >该等第三方社交媒体或其他服务可能由相关的第三方或我们运营。<text
+          class="strong"
+          >您使用该等第三方的社交媒体服务或其他服务（包括您向该等第三方提供的任何个人信息），须受第三方自己的服务条款及隐私政策（而非《用户协议》或本《隐私政策》）约束，您需要仔细阅读其条款</text
+        >。</text
+      >
+      <text class="body-text strong"
+        >当您查看第三方创建的网页或使用第三方开发的应用程序时，这些第三方可能会放置他们自己的Cookie或网络Beacon，这些Cookie或网络Beacon不受我们的控制，且它们的使用不受本政策的约束。我们会努力去要求这些主体对您的个人信息采取保护措施，建议您与他们联系以获得关于他们的隐私权政策的详细情况。如您发现这些第三方创建的网页或第三方开发的应用程序存在风险时，建议您终止相关操作以保护您的合法权益。</text
+      >
+    </div>
+
+    <!-- 十五、适用范围 -->
+    <div class="section">
+      <text class="section-title">十五、【本《隐私政策》的适用范围】</text>
+      <text class="body-text"
+        >除某些特定服务或特定人群外，我们所有的服务均适用本《隐私政策》。这些特定服务或特定人群将适用特定的隐私政策。该特定服务或特定人群的隐私政策构成本《隐私政策》的一部分。<text
+          class="strong"
+          >如任何特定服务或特定人群的隐私政策与本《隐私政策》有不一致之处，则适用特定服务或特定人群的隐私政策。</text
+        ></text
+      >
+      <text class="body-text"
+        >除本《隐私政策》另有规定外，本《隐私条款》所用词语将与《用户协议》所定义的词语具有相同的涵义。</text
+      >
+      <text class="body-text"
+        >请您注意，<text class="strong">本《隐私政策》不适用于以下情况</text
+        >：</text
+      >
+      <text class="body-text underline"
+        >●通过我们的服务而接入的第三方服务（包括任何第三方网站）收集的信息；</text
+      >
+      <text class="body-text underline"
+        >●通过在我们服务中进行广告服务的其他公司和机构所收集的信息。</text
+      >
+    </div>
+
+    <!-- 十六、修改 -->
+    <div class="section">
+      <text class="section-title">十六、【本《隐私政策》的修改】</text>
+      <text class="body-text"
+        >我们可能会根据相关法律法规的规定，定期自查对用户个人信息和其他信息及数据安全的保护措施，并按照相关法律法规的规定进行调整/修改本《隐私政策》的条款，该等修改构成本《隐私政策》的一部分。</text
+      >
+      <text class="body-text strong"
+        >如该等调整/修改造成您在本《隐私政策》下权利的实质减少，我们将在修改生效前通过在主页上显著位置提示或向您发送电子邮件或以其他合理方式通知您，在该种情况下，若您继续使用我们的服务，即表示同意受经修订的本《隐私政策》的约束。</text
+      >
+    </div>
+
+    <!-- 十七、适用法律 -->
+    <div class="section">
+      <text class="section-title">十七、【适用法律】</text>
+      <text class="body-text"
+        >1、本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。</text
+      >
+      <text class="body-text strong"
+        >2、若您和我们之间发生任何纠纷或争议，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交南宁仲裁委员会仲裁。</text
+      >
+    </div>
+
+    <!-- 十八、联系方式 -->
+    <div class="section">
+      <text class="section-title">十八、【联系方式】</text>
+      <text class="body-text"
+        >如您对本《隐私政策》或涉及个人信息方面的内容有任何疑问或建议的，或发现您的相关信息受到侵害的，请您通过如下方式联系我们：</text
+      >
+      <text class="body-text"
+        >【个人信息保护负责人邮箱】：yangxinyi@whhuoyan.cn</text
+      >
+      <text class="body-text"
+        >【未成年人投诉举报邮箱】：yangxinyi@whhuoyan.cn</text
+      >
+      <text class="body-text"
+        >【文件收寄地址】：湖北省武汉市汉阳区龙阳街陶家岭社区陶家岭5.5产业园综合楼第11层01室</text
+      >
+    </div>
+  </div>
+</template>
+
+<script>
+import manifest from '../../manifest.json'
+
+export default {
+  data() {
+    return {
+      productname:""
+    }
+  },
+  onInit() {
+    this.productname=manifest.name
+  },
+  methods: {
+    openLink(url) {
+      // 快应用中打开链接需使用 router.push 或 system 接口
+      // 此处为演示，实际可使用快应用提供的 web 组件或跳转
+      console.log('打开链接：', url);
+      // 示例：使用快应用 system 打开浏览器
+      const system = require('@system.app');
+      system.openURL({
+        url: url,
+        fail: function (data, code) {
+          console.log('打开链接失败');
+        }
+      });
+    }
+  }
+}
+</script>
+
+<style>
+.privacy-wrapper {
+  padding: 24px 20px 40px;
+  background-color: #ffffff;
+  color: #1e1e1e;
+  font-size: 15px;
+  flex-direction: column;
+}
+.main-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+  flex-direction: column;
+}
+.toc {
+  margin-bottom: 24px;
+  flex-direction: column;
+}
+.toc-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #000000;
+}
+.toc-item {
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 2px;
+}
+.section {
+  margin-bottom: 24px;
+  flex-direction: column;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+.sub-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #000000;
+}
+.body-text {
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+.strong {
+  font-weight: 700;
+  color: #000000;
+}
+.underline {
+  text-decoration: underline;
+}
+.em-underline {
+  font-style: italic;
+  text-decoration: underline;
+}
+.strong-em-underline {
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  color: #000000;
+}
+.strong-underline {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000000;
+}
+.em {
+  font-style: italic;
+}
+.link {
+  color: #0055cc;
+  text-decoration: underline;
+}
+</style>

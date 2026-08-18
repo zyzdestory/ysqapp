@@ -1,0 +1,206 @@
+<template>
+  <div class="detail-modal">
+    <div class="detail-content" @click.stop>
+      <div class="detail-header">
+        <image
+          class="detail-image"
+          src="{{currentRecipe.image}}"
+          mode="aspectFill"
+        />
+      </div>
+      <div class="detail-body">
+        <text class="detail-name">{{ currentRecipe.name }}</text>
+        <text class="detail-desc">{{ currentRecipe.description }}</text>
+        <div class="detail-meta-row">
+          <text class="detail-meta">⏱️ {{ currentRecipe.time }}</text>
+          <text class="detail-meta">👥 {{ currentRecipe.servings }}</text>
+          <text class="detail-meta">🔥 {{ currentRecipe.difficulty }}</text>
+        </div>
+        <div class="ingredients-section">
+          <text class="section-title">食材清单</text>
+          <text class="ingredient" for="{{currentRecipe.ingredients}}">{{
+            $item
+          }}</text>
+        </div>
+        <div class="steps-section">
+          <text class="section-title">制作步骤</text>
+          <div class="step-item" for="(idx,step) in currentRecipe.steps">
+            <div class="step-number"><text>{{ idx + 1 }}</text></div>
+            <div class="step-content">
+              <text class="step-text">{{ step.text }}</text>
+              <image
+                class="step-image"
+                src="{{step.image}}"
+                mode="aspectFill"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="notes-section">
+          <text class="section-title">注意事项</text>
+          <text class="note-text">{{ currentRecipe.notes }}</text>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import recipes from '../helper/recipes.js'
+import router from '@system.router'
+export default {
+  data() {
+    return {
+      currentRecipe: null
+    }
+  },
+  onInit(options) {
+    let recipe = JSON.parse(options.recipe)
+    this.currentRecipe = recipe
+  },
+  goBack() {
+    router.back()
+  }
+}
+</script>
+
+<style lang="less">
+.detail-modal {
+  flex: 1;
+  flex-direction: column;
+  .detail-content {
+    width: 100%;
+    max-height: 90%;
+    background-color: #fff;
+    overflow: hidden;
+    flex-direction: column;
+  }
+}
+
+.detail-header {
+  position: relative;
+
+  .detail-image {
+    width: 100%;
+    height: 400px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 36px;
+    line-height: 60px;
+  }
+}
+
+.detail-body {
+  flex: 1;
+  padding: 30px;
+  flex-direction: column;
+  .detail-name {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .detail-desc {
+    font-size: 28px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .detail-meta-row {
+    display: flex;
+    margin-bottom: 25px;
+
+    .detail-meta {
+      font-size: 26px;
+      color: #666;
+      margin-right: 30px;
+    }
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6b6b;
+  }
+
+  .ingredients-section {
+    margin-bottom: 30px;
+    flex-direction: column;
+    .ingredient {
+      font-size: 28px;
+      color: #555;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+
+  .steps-section {
+    margin-bottom: 30px;
+    flex-direction: column;
+    .step-item {
+      margin-bottom: 25px;
+      flex-direction: column;
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background-color: #ff6b6b;
+        color: #fff;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 50px;
+        margin-right: 20px;
+        flex-shrink: 0;
+        text{
+          color: #fff
+        }
+      }
+
+      .step-content {
+        flex: 1;
+        flex-direction: column;
+        .step-text {
+          font-size: 28px;
+          color: #555;
+          margin-bottom: 15px;
+        }
+
+        .step-image {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .notes-section {
+    background-color: #fff8f0;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #ff6b6b;
+      flex-direction: column;
+    
+    .note-text {
+      font-size: 28px;
+      color: #555;
+    }
+  }
+}
+</style>

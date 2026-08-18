@@ -1,0 +1,512 @@
+<import name="activead" src="./custom.ux"></import>
+<!-- background-image:{{$item.url}} -->
+<template>
+  <div class="page-wrapper">
+    <image
+      class="backgroundimage"
+      src="{{backgroundUrl}}"
+      @click="handlereward"
+    ></image>
+    <div class="postion" if="{{istest}}">
+      <div for="{{adiddata}}">
+        <text>{{ $item.adId }}</text>
+      </div>
+    </div>
+    <div
+      class="popup-layer"
+      for="{{ currentPopups }}"
+      tid="trackKey"
+      style="{{itemStyle($item)}}"
+    >
+      <image
+        src="{{$item.url}}"
+        style="width: {{ $item.width }}px; height: {{ $item.height }}px;"
+        @click="btnchange"
+      ></image>
+      <activead
+        if="{{$item.adId}}"
+        items="{{$item}}"
+        @onload="onAdLoad"
+        @handleclcik="handleclick"
+        @handeerror="onAdError"
+      ></activead>
+    </div>
+  </div>
+</template>
+
+<script>
+import prompt from '@system.prompt'
+import ad from '@service.ad'
+import { setGlobalData } from '../global'
+import adTracker from '../helper/ad/adTracker'
+import adNative from '../helper/ad/adNative'
+import router from '@system.router'
+import rewarede from "../helper/ad/adRewardedVideoMultiton.js"
+
+import pkg from '@system.package'
+export default {
+  data: {
+    pageData: {},
+    backgroundUrl: '',
+    backgroundindex: 0,
+    backgrounddata: [],
+    currentPopups: [],
+    currentGroupIndex: 0,
+    totalGroups: 0,
+    adConfigs: [],
+    nativeaddata: [],
+    rewardeddata: [],
+    options: {},
+    adiddata: [],
+    istest: false,
+    newdata: [],
+    rewardMultiton: null,
+    isfirst: true,
+    isRewardedAdShowing: false,
+    pageDataReady: false,
+    adPool: [],
+    poolSize: 3,
+    poolReplenishing: false,
+    _poolPromise: null
+  },
+  filteradid(arr) {
+    let str = ''
+    arr.forEach(item => {
+      str += "\n" + item.adId
+    })
+    return str
+  },
+  onInit(options) {
+    this.options = options
+    // 将 options 存储到全局，供数据埋点使用
+    setGlobalData('channel', options.channelId)
+    setGlobalData('adOptions', options)
+    adTracker.trackPageShow('adpage', { type: 'app_cold_launch' })
+    this.loadPageData()
+  },
+  computed: {
+    itemStyle() {
+      return (item) => {
+        const base = {
+          left: `${item.x}px`,
+          width: `${item.width}px`,
+          height: `${item.height}px`,
+          position: 'absolute'
+        }
+        if (item.type === 1) {
+          // type=1 底部贴底，top失效
+          return {
+            ...base,
+            bottom: '0px',
+            top: 'auto'
+          }
+        } else {
+          // 正常top定位
+          return {
+            ...base,
+            top: `${item.y}px`
+          }
+        }
+      }
+    }
+  },
+  onShow() {
+    if (!this.isfirst) {
+      if (!this.isRewardedAdShowing) {
+        adTracker.trackPageShow('adpage', { type: 'app_hot_launch' })
+      }
+      this.switchToNextGroup()
+      this.preloadnative()
+      this.changebackgroud()
+    }
+
+  },
+  btnchange() {
+    this.switchToNextGroup()
+    this.preloadnative()
+    this.changebackgroud()
+  },
+
+  onHide() { },
+
+  checkInstalledApps(appsToCheck) {
+    if (!appsToCheck || appsToCheck.length === 0) return Promise.resolve(false)
+
+    return $utils.checkAppsInstalled(appsToCheck)
+      .then(results => {
+        setGlobalData('installedApps', results)
+        const installedCount = Object.values(results).filter(Boolean).length
+        adTracker.trackCustom('app_install_check', {
+          total: appsToCheck.length,
+          installed_count: installedCount,
+          not_installed_count: appsToCheck.length - installedCount
+        })
+        // 只要有任一产品已安装，跳转到 Layout
+        if (installedCount > 0) {
+          router.replace({ uri: '/Layout' })
+          return true
+        }
+        return false
+      })
+      .catch(err => {
+        console.log('[INSTALL] App check error:', err)
+        return false
+      })
+  },
+
+  loadPageData() {
+    const channelId = this.options.channelId || ""
+    const mediaId = this.options.mediaId || ""
+    // 统计接口请求次数
+    adTracker.trackCustom('api_request', {
+      api_name: 'fetchPromotionConfig',
+      channel_id: channelId,
+      media_id: mediaId
+    })
+  
+    $apis.api.fetchPromotionConfig({ channelId, mediaId })
+      .then(data => {
+        if (data.id) {
+          // 统计请求成功
+          adTracker.trackCustom('api_success', {
+            api_name: 'fetchPromotionConfig',
+            has_data: true,
+            config_id: data.id
+          })
+          this.pageData = data
+          this.istest = data.config.text || false
+          // 是否开启扫包
+          const isApkg = data.config.blockPkgStatus
+          const appsToCheck = data.config.blockPkg || []
+
+          if (isApkg && appsToCheck.length > 0) {
+            this.checkInstalledApps(appsToCheck).then(shouldSkip => {
+              if (shouldSkip) return
+              this.initPageData(data)
+            })
+          } else {
+            this.initPageData(data)
+          }
+        } else {
+          // 统计请求成功但无数据
+          adTracker.trackCustom('api_success_no_data', {
+            api_name: 'fetchPromotionConfig'
+          })
+          router.replace({ uri: '/Layout' })
+        }
+      })
+      .catch(err => {
+        // 统计请求失败
+        adTracker.trackCustom('api_fail', {
+          api_name: 'fetchPromotionConfig',
+          error: err ? String(err) : 'unknown'
+        })
+        console.log('请求推广位配置失败:', err)
+        router.push({ uri: '/Layout' })
+      })
+  },
+  initPageData(data) {
+    this.isfirst = false
+    this.poolSize = (data.config && data.config.nativeAdPoolSize) || 3
+    this.adconfig()
+    this.backgrounddata = data.backgroundImages || []
+    this.backgroundindex = 0
+    this.backgroundUrl = this.backgrounddata[this.backgroundindex]
+  },
+  adconfig() {
+    const adconfig = this.pageData.adConfigs
+    try {
+      let rewardeddata = adconfig.filter(item => item.type == 4)[0].ad
+      this.rewardeddata = rewardeddata
+      this.preloadRewardAd()
+
+    } catch (err) {
+
+    }
+    try {
+      let nativedata = adconfig.filter(item => item.type == 3)[0].ad
+      this.nativeaddata = nativedata
+      this.preloadnative()
+    } catch (err) {
+
+    }
+  },
+  handlereward() {
+    if (!this.rewardMultiton) return
+    if (this.isRewardedAdShowing) return
+    this.isRewardedAdShowing = true
+    this.rewardMultiton.show()
+      .then(() => { })
+      .catch(() => {
+        this.isRewardedAdShowing = false
+      })
+  },
+  preloadRewardAd() {
+    if (!this.rewardeddata || this.rewardeddata.length === 0) return
+    rewarede.createRewardedVideo(this.rewardeddata, {
+      mode: 'sequential',
+      maxRetry: 3,
+      retryInterval: 1000,
+      timeout: 10000
+    })
+      .then(instance => {
+        this.rewardMultiton = instance
+        // 广告关闭后切换到下一个广告位并预加载
+        instance.on('close', () => {
+          this.isRewardedAdShowing = false
+          instance.loadNext().catch(err => {
+            console.log('[REWARD] loadNext fail:', err)
+          })
+        })
+      })
+      .catch(err => {
+        console.log('[REWARD] multiton init fail:', err)
+      })
+  },
+  preloadnative() {
+    this.loadgroup()
+    // 立即渲染弹框骨架（空 adId），有一个广告加载出来就填一个，直至全部
+    this.currentPopups = this.newdata.map((item, index) => ({
+      ...item,
+      adId: "",
+      adUnitId: "",
+      price: "",
+      trackKey: index + '_'
+    }))
+    this.fillPopupsIncrementally()
+  },
+  fillPopupsIncrementally() {
+    // 1. 先消费池里已有的广告，立即分配到空位
+    while (this.adPool.length > 0) {
+      const idx = this.currentPopups.findIndex(p => !p.adId)
+      if (idx === -1) break
+      this.assignAdToSlot(idx, this.adPool.shift())
+    }
+    this.adiddata = this.adPool.slice()
+    // 2. 还有空位 → 并行加载，每个完成立即填到第一个空位
+    const emptyCount = this.currentPopups.filter(p => !p.adId).length
+    if (emptyCount === 0 || !this.nativeaddata || this.nativeaddata.length === 0) {
+      this.fillAdPool(this.poolSize)
+      return
+    }
+    for (let i = 0; i < emptyCount; i++) {
+      adNative.preloadNativeAds(this.nativeaddata, { count: 1 })
+        .then(({ adIds }) => {
+          if (adIds && adIds.length > 0) {
+            this.assignAdToFirstEmptySlot(adIds[0])
+          }
+        })
+        .catch(() => { })
+    }
+    // 同时后台维持广告池容量
+    this.fillAdPool(this.poolSize)
+  },
+  assignAdToFirstEmptySlot(adObj) {
+    const idx = this.currentPopups.findIndex(p => !p.adId)
+    if (idx === -1) {
+      // 没有空位，多余广告入池备用
+      this.adPool.push(adObj)
+      this.adiddata = this.adPool.slice()
+      return
+    }
+    this.assignAdToSlot(idx, adObj)
+  },
+  assignAdToSlot(idx, adObj) {
+    const updated = this.currentPopups.slice()
+    updated[idx] = {
+      ...updated[idx],
+      adId: adObj.adId || '',
+      adUnitId: adObj.adUnitId || '',
+      price: adObj.price || '',
+      trackKey: idx + '_' + (adObj.adId || '')
+    }
+    this.currentPopups = updated
+  },
+  fillAdPool(targetSize) {
+    if (!this.nativeaddata || this.nativeaddata.length === 0) return Promise.resolve()
+    // 已在补池中：返回同一个 promise，调用方可 await 补池完成再消费
+    if (this.poolReplenishing) return this._poolPromise || Promise.resolve()
+    const needed = targetSize - this.adPool.length
+    if (needed <= 0) return Promise.resolve()
+    this.poolReplenishing = true
+
+    const loadBatch = () => {
+      const currentNeeded = targetSize - this.adPool.length
+      if (currentNeeded <= 0) {
+        this.poolReplenishing = false
+        return Promise.resolve()
+      }
+      const batchCount = Math.min(currentNeeded, this.nativeaddata.length)
+      return adNative.preloadNativeAds(this.nativeaddata, { count: batchCount })
+        .then(({ adIds }) => {
+          this.adPool = this.adPool.concat(adIds)
+          this.adiddata = this.adPool.slice()
+          // 不足目标数量且有返回：继续补
+          if (this.adPool.length < targetSize && adIds.length > 0) {
+            return loadBatch()
+          }
+          this.poolReplenishing = false
+        })
+        .catch(() => {
+          this.poolReplenishing = false
+          // 池未满：稍后重试
+          if (this.adPool.length < targetSize) {
+            setTimeout(() => this.fillAdPool(targetSize), 2000)
+          }
+        })
+    }
+    this._poolPromise = loadBatch()
+    return this._poolPromise
+  },
+  changebackgroud() {
+    this.backgroundindex++
+    if (this.backgroundindex >= this.backgrounddata.length) {
+      this.backgroundindex = 0
+    }
+    this.backgroundUrl = this.backgrounddata[this.backgroundindex]
+  },
+  loadgroup() {
+    const groups = this.pageData.groups
+    if (!groups || groups.length === 0) {
+      this.currentPopups = []
+      return
+    }
+    if (this.currentGroupIndex >= groups.length) {
+      this.currentGroupIndex = 0
+    }
+    const currentGroup = groups[this.currentGroupIndex]
+    if (!currentGroup || !currentGroup.items || currentGroup.items.length === 0) {
+      this.currentPopups = []
+      return
+    }
+    this.newdata = currentGroup.items.filter(items => items.type !== undefined && items.type !== null && items.url)
+    this.currentPopups = this.newdata
+  },
+  switchToNextGroup() {
+    const groups = this.pageData.groups
+    if (!groups || groups.length === 0) return
+
+    // 弹框按顺序切换：仅推进索引，弹框由 preloadnative 统一加载，避免重复消费广告池
+    this.currentGroupIndex = (this.currentGroupIndex + 1) % groups.length
+    console.log('切换到第', this.currentGroupIndex + 1, '组弹框')
+  },
+
+  onAdLoad(e) {
+    console.log('原生广告加载成功:', e)
+  },
+
+  handleclick() {
+
+  },
+
+  onAdError(item) {
+    if (!item) return
+    const idx = this.currentPopups.findIndex(p => p.adId === item.adId)
+    if (idx === -1) return
+    // 清空失效广告位
+    this.assignAdToSlot(idx, { adId: '', adUnitId: '', price: '' })
+    // 立即从池里补一个；池空则异步加载补一个
+    if (this.adPool.length > 0) {
+      this.assignAdToSlot(idx, this.adPool.shift())
+      this.adiddata = this.adPool.slice()
+    } else if (this.nativeaddata && this.nativeaddata.length > 0) {
+      adNative.preloadNativeAds(this.nativeaddata, { count: 1 })
+        .then(({ adIds }) => {
+          if (adIds && adIds.length > 0) this.assignAdToFirstEmptySlot(adIds[0])
+        })
+        .catch(() => { })
+    }
+    this.fillAdPool(this.poolSize)
+  },
+
+  onDestroy() {
+    if (this.rewardMultiton) {
+      try { this.rewardMultiton.destroy() } catch (e) { }
+      this.rewardMultiton = null
+    }
+  }
+}
+</script>
+
+<style lang="less">
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.backgroundimage {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  position: absolute;
+  top: 0px;
+}
+
+.popup-layer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+.postion {
+  position: absolute;
+  flex-direction: column;
+  top: 0px;
+}
+
+.loading-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-text {
+  font-size: 32px;
+  color: #fff;
+}
+
+.reward-tip {
+  position: fixed;
+  top: 100px;
+  transform: translateX(-50%);
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+}
+
+.reward-tip-text {
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.group-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.indicator-text {
+  font-size: 22px;
+  color: #fff;
+}
+</style>

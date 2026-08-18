@@ -1,0 +1,81 @@
+<template>
+  <div class="wrapper">
+    <ad-view class="ad-native" if="{{adId}}" adid="{{adId}}" @adshow="handleshow" @adclick="handleclick" @error="handleerror">
+      <ad-clickable-view type="click">
+        <ad-div><ad-text value='{{adId}}'></ad-text></ad-div>
+      </ad-clickable-view>
+    </ad-view>
+  </div>
+</template>
+
+<script>
+import ad from '@service.ad'
+import prompt from '@system.prompt'
+import adTracker from '../helper/ad/adTracker'
+
+export default {
+  props: [ 'items'],
+  data: {
+    adId: '',
+    adUnitId:'',
+    price:''
+  },
+
+  handleshow(e) {
+    adTracker.reportEvent(adTracker.AD_TYPES.NATIVE, adTracker.TRACK_EVENTS.AD_SHOW, {
+      adId: this.adId,
+      adUnitId: this.adUnitId,
+      price:this.price
+    })
+  },
+
+  handleclick(e) {
+    adTracker.reportEvent(adTracker.AD_TYPES.NATIVE, adTracker.TRACK_EVENTS.AD_CLICK, {
+      adId: this.adId,
+      adUnitId: this.adUnitId,
+      price:this.price
+
+    })
+    this.$emit('handleclcik')
+  },
+
+  handleerror(e) {
+    adTracker.reportEvent(adTracker.AD_TYPES.NATIVE, adTracker.TRACK_EVENTS.AD_SHOW_FAIL, {
+      adId: this.adId,
+      adUnitId: this.adUnitId,
+      price:this.price,
+      errCode: e.errCode,
+      errMsg: e.errMsg
+    })
+    this.adId = ''
+    this.$emit('handeerror')
+  },
+
+  onInit() {
+    this.adId = this.items.adId
+    this.adUnitId=this.items.adUnitId
+    this.price=this.items.price
+  },
+
+  onDestroy() {
+  }
+}
+</script>
+
+<style>
+.wrapper {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.ad-native {
+  height: 1200px;
+  position: absolute;
+  top: -60px;
+}
+
+ad-div, ad-text {
+  width: 750px;
+}
+</style>

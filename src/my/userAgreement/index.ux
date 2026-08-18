@@ -1,0 +1,753 @@
+<template>
+  <div class="agreement-wrapper">
+    <!-- 标题 -->
+    <text class="main-title">用户协议</text>
+
+    <!-- 目录 -->
+    <div class="toc">
+      <text class="toc-title">目录</text>
+      <text class="toc-item">一、前言</text>
+      <text class="toc-item">二、释义</text>
+      <text class="toc-item">三、特别声明</text>
+      <text class="toc-item">四、关于本服务</text>
+      <text class="toc-item">五、软件的获取</text>
+      <text class="toc-item">六、软件的安装与卸载</text>
+      <text class="toc-item">七、软件的更新</text>
+      <text class="toc-item">八、用户个人信息保护</text>
+      <text class="toc-item">九、用户注意事项</text>
+      <text class="toc-item">十、用户行为规范</text>
+      <text class="toc-item">十一、广告</text>
+      <text class="toc-item">十二、不可抗力和其他免责事由</text>
+      <text class="toc-item">十三、损害赔偿</text>
+      <text class="toc-item">十四、知识产权声明</text>
+      <text class="toc-item">十五、终端安全责任</text>
+      <text class="toc-item">十六、第三方软件或技术</text>
+      <text class="toc-item">十七、隐私保护</text>
+      <text class="toc-item">十八、权利保护</text>
+      <text class="toc-item">十九、修改与终止</text>
+      <text class="toc-item">二十、管辖和法律适用</text>
+      <text class="toc-item">二十一、其他说明</text>
+      <text class="toc-item">二十二、联系方式</text>
+    </div>
+
+    <!-- 一、前言 -->
+    <div class="section">
+      <text class="section-title">一、【前言】</text>
+      <text class="body-text">发布时间：2026年07月07日</text>
+      <text class="body-text">更新日期：2026年07月07日</text>
+      <text class="body-text">生效日期：2026年07月07日</text>
+      <text class="body-text">产品名称：{{productname}}</text>
+      <text class="body-text">开发者：武汉火炎科技有限公司</text>
+      <text class="body-text strong"
+        >我们的用户协议已于【2026】年【7】月【7】日更新。我们对用户协议进行了修订，请您务必在使用武汉火炎产品和/或服务之前，认真完整地阅读并理解、同意我们的《用户协议》。如您为未成年人，请您确保您阅读本《用户协议》及确认的行为系在父母或监护人的指导下完成且征得父母或监护人的同意。如果您有任何问题，请通过邮箱：yangxinyi@whhuoyan.cn
+        告诉我们。</text
+      >
+      <text class="body-text"
+        >更新后的用户协议一经正式发布，我们将以显著、适当的方式（如站内信息、系统通知/提示等）告知并送达您，请您收到我们的提示后全面认真地阅读并理解更新版本，<text
+          class="strong-em-underline"
+          >特别应重点阅读我们以</text
+        >【<text class="strong">粗体</text>/<text class="underline">下划线</text
+        >/<text class="em-underline">斜体</text>】<text
+          class="strong-em-underline"
+          >标识的条款</text
+        >，确保您充分理解和同意之后再开始使用。若您不接受修改后的条款，请立即停止使用服务，您继续使用服务视为接受修改后的协议。</text
+      >
+      <text class="body-text"
+        >本用户协议（以下简称"本协议"）是您（或称"用户"，指注册、登录、使用、浏览本服务的个人或组织）与武汉火炎科技有限公司（注册地址：<text
+          class="strong"
+          >中国（广西）自由贸易试验区南宁片区社鹃路10号汇通产业园A1栋210号）</text
+        >及其关联公司（以下统称"武汉火炎"或"我们"）及其运营合作单位（以下统称"合作单位"）之间的，关于武汉火炎产品（指武汉火炎研发运营的移动手机应用或网站，"本产品"以及武汉火炎随技术发展出现的新形态等向您提供的各项产品和/或服务）和扩展服务所订立的协议。</text
+      >
+    </div>
+
+    <!-- 二、释义 -->
+    <div class="section">
+      <text class="section-title">二、【释义】（包含但不限于）</text>
+      <text class="body-text"
+        >本产品：指武汉火炎及其关联公司研发运营的快应用程序</text
+      >
+    </div>
+
+    <!-- 三、特别声明 -->
+    <div class="section">
+      <text class="section-title">三、【特别声明】</text>
+      <text class="body-text"
+        >在使用本产品和扩展服务时您将受到本协议的约束，所以请您在使用本服务前务必阅读并理解以下条款，继续使用即表示您已同意武汉火炎提供的《用户协议》与《隐私政策》的所有条款。如果您选择主动勾选、主动点击"同意"、"√"、"注册"、"发送"、"下一步"、主动填写或提供、登录等，则将被视为您的肯定性授权，条款将被适用。<text
+          class="strong"
+          >若您不同意我们按照规定获取您的相关信息，您可能无法正常使用我们的产品或服务，您需及时停止继续注册和使用等行为，并通过本协议列明的联系方式与我们取得联系，提出您宝贵的意见或建议。</text
+        ></text
+      >
+      <text class="body-text strong"
+        >特别是免除或者限制责任的条款、收集个人信息以及开通或使用某项拓展服务的单独协议，您可以选择接受或不接受。限制、免责条款会以加粗形式或其他显著、清晰的提示您注意，您拒绝某项扩展服务不会影响本产品基本服务和其他已授权扩展服务的使用或受到限制。</text
+      >
+      <text class="body-text strong"
+        >若您虽已阅读本协议所有条款，但不接受部分或全部内容的，我们建议您不使用或直接卸载本产品，以及停止使用本产品相关服务。</text
+      >
+      <text class="body-text strong"
+        >如果您未满18周岁，请在监护人的陪同下阅读理解本协议及其他条款且征得监护人的同意，并特别注意未成年人使用条款。</text
+      >
+    </div>
+
+    <!-- 四、关于本服务 -->
+    <div class="section">
+      <text class="section-title">四、【关于本服务】</text>
+      <text class="sub-title">（一）本服务的内容</text>
+      <text class="body-text"
+        >本服务的内容是指武汉火炎向您提供的软件及拓展服务统称为本服务。</text
+      >
+      <text class="sub-title">（二）本服务的形式</text>
+      <text class="body-text"
+        >1、您使用本服务需要下载本产品客户端软件，对于这些软件，武汉火炎给予您一项个人的、不可转让及非排他性的许可。您仅可为访问或使用本服务的合法目的而使用这些软件及服务。</text
+      >
+      <text class="body-text"
+        >2、本服务中本产品快应用程序根据不同手机厂商提供多个应用版本，<text
+          class="strong"
+          >请您选择与所安装终端设备相匹配的快应用程序版本。</text
+        ></text
+      >
+      <text class="body-text">3、本服务许可的范围</text>
+      <text class="body-text"
+        >（1）您可以为合法的商业目的或非商业目的在单一台终端设备上安装、使用、显示、运行本产品。</text
+      >
+      <text class="body-text"
+        >（2）您可以为使用本产品及服务的目的复制本产品的一个副本，该副本仅用作备份用途。<text
+          class="strong"
+          >备份副本包含原软件中含有的所有著作权信息，您不得擅自予以删除、增减、修改、盗用或实施其他侵犯相关知识产权的行为。</text
+        ></text
+      >
+      <text class="body-text"
+        >（3）本条及本协议其他条款未明示授权的其他一切权利仍由武汉火炎保留，您在行使这些权利时须另外取得武汉火炎的书面许可，未经许可使用将构成侵权，武汉火炎将有权向您要求停止侵权行为、禁止您使用相关软件及索赔等。</text
+      >
+      <text class="body-text strong"
+        >（4）武汉火炎如果未行使前述任何权利，并不构成对该权利的放弃。</text
+      >
+    </div>
+
+    <!-- 五、软件的获取 -->
+    <div class="section">
+      <text class="section-title">五、【软件的获取】</text>
+      <text class="body-text"
+        >（一）您可以直接从武汉火炎的网站上获取本产品，也可以从得到武汉火炎授权的第三方获取。</text
+      >
+      <text class="body-text"
+        >（二）如果您从未经武汉火炎授权的第三方获取本产品或与本产品名称相同的安装程序，武汉火炎无法保证该软件能够正常使用，并对因此给您造成的损失不予负责。</text
+      >
+    </div>
+
+    <!-- 六、软件的安装与卸载 -->
+    <div class="section">
+      <text class="section-title">六、【软件的安装与卸载】</text>
+      <text class="body-text"
+        >（一）武汉火炎可能为不同的终端设备开发了不同的软件版本，请您根据实际情况选择下载合适的版本进行安装。<text
+          class="strong"
+          >您不得将本产品安装在未经武汉火炎明示许可的其他终端设备上。否则您可能承担因未正确安装合适的软件版本所带来的风险及损失。</text
+        ></text
+      >
+      <text class="body-text"
+        >（二）下载安装程序后，您需要按照该程序提示的步骤正确安装。</text
+      >
+      <text class="body-text"
+        >（三）为提供更加优质、安全的服务，在本产品安装时武汉火炎可能推荐您安装其他软件，您可以选择安装或不安装。</text
+      >
+      <text class="body-text"
+        >（四）如果您不再需要使用本产品或者需要安装新版软件，可以自行卸载。如果您愿意帮助武汉火炎改进产品服务，请您告知卸载的原因。</text
+      >
+    </div>
+
+    <!-- 七、软件的更新 -->
+    <div class="section">
+      <text class="section-title">七、【软件的更新】</text>
+      <text class="body-text"
+        >（一）为了改善用户体验、完善服务内容，武汉火炎将不断努力开发新的服务，并为您不时提供软件更新（这些更新可能会采取软件替换、修改、功能强化、版本升级等形式）。</text
+      >
+      <text class="body-text"
+        >（二）为了保证本产品及服务的安全性和功能的一致性，对于软件更新，武汉火炎将会向您推送软件更新信息并由您自行决定是否更新。武汉火炎有权因安全需要、版本升级需要、功能强化需要、有关政府部门要求对软件的部分功能效果进行改变或限制。</text
+      >
+      <text class="body-text"
+        >（三）本产品新版本发布后，旧版本的软件可能无法使用。武汉火炎不保证旧版本产品继续可用及相应的客户服务，请您随时核对并下载最新版本。</text
+      >
+    </div>
+
+    <!-- 八、用户个人信息保护 -->
+    <div class="section">
+      <text class="section-title">八、【用户个人信息保护】</text>
+      <text class="body-text strong"
+        >（一）保护您个人信息是武汉火炎一直以来坚持的一项基本原则（详见《隐私政策》、《儿童版隐私政策》、《儿童个人信息保护规则》），</text
+      >
+      <text class="body-text"
+        >武汉火炎将会采取符合业界标准的安全防护措施保护您的个人信息，防止数据遭到未经授权访问、公开披露、使用、修改、损坏或丢失。<text
+          class="strong"
+          >除法律法规、个人信息保护国家标准豁免的情形及《隐私政策》另有规定外，未经您许可，武汉火炎绝不会主动向第三方公开、透露您个人信息。</text
+        ></text
+      >
+      <text class="body-text"
+        >（二）武汉火炎的共同信息控制人（若有）将会明确告知您，且其将同样遵循个人信息保护要求。若本服务中的部分产品或服务系由第三方提供，则该产品或服务将明示标识，如您对第三方的个人信息收集、使用行为有异议，可直接向第三方申诉，武汉火炎亦会履行督促和监督义务。我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息，并且只会共享提供服务所必要的个人信息。</text
+      >
+      <text class="body-text"
+        >（三）武汉火炎收集个人信息后将及时采取<text class="strong"
+          >去标识化处理</text
+        >，并对相关信息采取技术保护措施，通过<text class="strong"
+          >加密存储、分开储存、加密传输、控制访问</text
+        >等保障您个人信息的安全。</text
+      >
+      <text class="body-text strong"
+        >（四）您在使用本产品及接受我们的服务的过程中，可能需要您提供一些个人信息（例如：您使用本产品进行拍摄时，我们可能需要获取您的相册/麦克风权限）具体内容详见《隐私政策》。</text
+      >
+      <text class="body-text"
+        >（五）一般情况下，您可随时访问、更正、删除、撤回同意自己提交的信息，但出于安全性和身份识别（如号码申诉服务）的考虑，更正的频次我们将予以限制，注册时提供的初始信息和验证信息更正将经核查后方可予以更正。</text
+      >
+      <text class="body-text"
+        >（六）武汉火炎将运用各种安全技术和程序建立完善的管理制度来保护您的个人信息，以免遭受未经授权的访问、使用或披露，但同时您也同意并理解，因技术限制及众多因素，如您的个人信息被侵害，武汉火炎将尽力配合您进行维权。</text
+      >
+      <text class="body-text strong"
+        >7.未满十八周岁的未成年人（包括未满十四周岁的儿童用户及已满十四周岁未满十八周岁的未成人年用户）使用我们的服务须在父母或监护人指导下进行。未成年人如欲使用本软件及扩展服务的，须真实填写用户个人信息，以便于武汉火炎对您的个人信息进行合理的保护。未成年人在阅读本协议及《隐私政策》时及提交个人信息之前，须在父母或监护人指导下进行并征得父母或监护人的同意。未成年人注册使用我们的服务的，我们将重点予以审核，审核方式包括但不限于电话核实、视频验证，此时我们需要您启用相机/通话录音功能，但我们会事先征得您的同意。您已充分知悉并同意：在我们审核的过程中，您应当确保您向我们提供的信息是真实、有效、合法的，否则因您提供虚假信息而产生的全部法律责任和不利后果将由您个人承担，我们对此不负任何责任。</text
+      >
+    </div>
+
+    <!-- 九、用户注意事项 -->
+    <div class="section">
+      <text class="section-title">九、【用户注意事项】</text>
+      <text class="body-text strong"
+        >您充分了解并同意，您必须为自己使用本产品时超出本协议约定或违反国家法律法规规定的一切行为自行承担责任。如由于其他武汉火炎不可抗拒的因素引起的异常，您确认并同意，武汉火炎不因此承担任何违约责任或赔偿责任。您应对本产品中的内容自行加以判断，并自行承担如下来自武汉火炎不可掌控的风险，包括但不限于：</text
+      >
+      <text class="body-text"
+        >（一）您必须选择与所安装手机相匹配的软件版本，否则，您需要承担由于软件与手机型号不相匹配所导致的后果；</text
+      >
+      <text class="body-text"
+        >（二）武汉火炎不对您在本产品及服务中过程中对相关数据的删除负责，请您谨慎操作；</text
+      >
+      <text class="body-text"
+        >（三）武汉火炎有权根据相关法律法规的规定及为实现业务处理目的所必要的最短时间自行决定单个用户在本产品及服务中数据的最长储存期限，并在服务器上为其分配数据最大存储空间等。您可根据自己的需要自行备份本产品及服务中的相关数据；</text
+      >
+      <text class="body-text"
+        >（四）如果您停止使用本产品及服务或服务被终止或取消，武汉火炎可以从服务器上永久地删除您的数据。服务停止、终止或取消后，武汉火炎没有义务向您返还任何数据；</text
+      >
+      <text class="body-text"
+        >（五）您理解并同意，武汉火炎有权决定将本产品作商业用途，包括但不限于开发、使用本产品的部分服务为第三方作推广等，您在使用第三方提供的内容或服务时应当谨慎，武汉火炎不对第三方的内容或产品负责。</text
+      >
+      <text class="body-text"
+        >（六）您理解并同意，本产品同大多数互联网软件一样，可能会受多种因素影响，包括但不限于用户原因、网络服务质量、社会环境等；也可能会受各种安全问题的侵扰，包括但不限于他人非法利用用户资料，进行现实中的骚扰；用户下载安装的其他软件或访问的其他网站中可能含有病毒、木马程序或其他恶意程序，威胁你的终端设备信息和数据安全，继而影响本产品的正常使用等。因此，您应加强信息安全及个人信息的保护意识，以免遭受损失；</text
+      >
+      <text class="body-text"
+        >（七）武汉火炎将按照行业标准采取必要技术措施保护你的终端设备信息和数据安全，但是您确认和同意武汉火炎并不能就此提供完全保证；</text
+      >
+      <text class="body-text"
+        >（八）在任何情况下，您不应轻信借款、索要密码或其他涉及财产的网络信息。</text
+      >
+    </div>
+
+    <!-- 十、用户行为规范 -->
+    <div class="section">
+      <text class="section-title">十、【用户行为规范】</text>
+      <text class="sub-title">（一）信息内容规范</text>
+      <text class="body-text"
+        >1、本条所述信息内容是指用户使用本产品及服务过程中所制作、复制、发布、传播的任何内容。</text
+      >
+      <text class="body-text"
+        >2、您理解并同意，本产品一直致力于为您提供文明健康、规范有序的网络环境，您不得利用本产品及服务制作、复制、发布、传播如下干扰本产品正常运营，以及侵犯其他用户或第三方合法权益的内容，包括但不限于：</text
+      >
+      <text class="body-text strong"
+        >（1）发布、传送、传播、储存违反国家法律法规禁止的内容：</text
+      >
+      <text class="body-text strong">①违反宪法确定的基本原则的；</text>
+      <text class="body-text strong"
+        >②危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</text
+      >
+      <text class="body-text strong">③损害国家荣誉和利益的；</text>
+      <text class="body-text strong"
+        >④煽动民族仇恨、民族歧视，破坏民族团结的；</text
+      >
+      <text class="body-text strong"
+        >⑤破坏国家宗教政策，宣扬邪教和封建迷信的；</text
+      >
+      <text class="body-text strong"
+        >⑥散布谣言，扰乱社会秩序，破坏社会稳定的；</text
+      >
+      <text class="body-text strong"
+        >⑦散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；</text
+      >
+      <text class="body-text strong"
+        >⑧侮辱或者诽谤他人，侵害他人合法权益的；</text
+      >
+      <text class="body-text strong"
+        >⑨煽动非法集会、结社、游行、示威、聚众扰乱社会秩序；</text
+      >
+      <text class="body-text strong">⑩以非法民间组织名义活动的；</text>
+      <text class="body-text strong"
+        >⑪不符合社会主义制度、国家利益、公民合法利益、公共秩序、社会道德风尚和信息真实性等"七条底线"要求的；</text
+      >
+      <text class="body-text strong"
+        >⑫含有法律、行政法规禁止的其他内容的。</text
+      >
+      <text class="body-text strong"
+        >（2）发布、传送、传播、储存侵害他人名誉权、肖像权、知识产权、商业秘密等合法权利的内容；</text
+      >
+      <text class="body-text strong"
+        >（3）涉及他人隐私、个人信息或资料的；</text
+      >
+      <text class="body-text strong"
+        >（4）发表、传送、传播骚扰、广告信息、过度营销信息及垃圾信息或含有任何性或性暗示的；</text
+      >
+      <text class="body-text strong">（5）进行违法犯罪活动的；</text>
+      <text class="body-text strong"
+        >（6）其他违反法律法规、政策及公序良俗、社会公德或干扰软件正常运营和侵犯其他用户或第三方合法权益内容的信息。</text
+      >
+
+      <text class="sub-title">（二）软件使用规范</text>
+      <text class="body-text strong"
+        >1、除非法律允许或武汉火炎书面许可，您使用本产品过程中不得从事下列行为：</text
+      >
+      <text class="body-text strong"
+        >（1）删除本产品及其副本上关于著作权、商标权等知识产权的信息；</text
+      >
+      <text class="body-text strong"
+        >（2）对本产品进行反向工程、反向汇编、反向编译，或者以其他方式尝试发现本产品的源代码；</text
+      >
+      <text class="body-text strong"
+        >（3）对武汉火炎拥有知识产权的内容进行使用、出租、出借、复制、修改、链接、转载、汇编、发表、出版、建立镜像站点等；</text
+      >
+      <text class="body-text strong"
+        >（4）对本产品或者本产品运行过程中释放到任何终端内存中的数据、软件运行过程中客户端与服务器端的交互数据，以及本产品运行所必需的系统数据，进行复制、修改、增加、删除、挂接运行或创作任何衍生作品，形式包括但不限于使用插件、外挂或非经武汉火炎授权的第三方工具/服务接入本产品和相关系统；</text
+      >
+      <text class="body-text strong"
+        >（5）通过修改或伪造软件运行中的指令、数据，增加、删减、变动软件的功能或运行效果，或者将用于上述用途的软件、方法进行运营或向公众传播，无论这些行为是否为商业目的；</text
+      >
+      <text class="body-text strong"
+        >（6）通过非武汉火炎开发、授权的第三方软件、插件、外挂、系统，登录或使用武汉火炎软件及服务，或制作、发布、传播上述工具；</text
+      >
+      <text class="body-text strong"
+        >（7）自行或者授权他人、第三方软件对本产品及其组件、模块、数据进行干扰；</text
+      >
+      <text class="body-text strong"
+        >（8）其他未经武汉火炎明示授权的行为；</text
+      >
+      <text class="body-text strong">（9）其他违反法律法规、政策的行为。</text>
+      <text class="body-text strong"
+        >2.您理解并同意，基于用户体验、本产品或相关服务平台运营安全、平台规则要求及健康发展等综合因素，武汉火炎有权选择提供服务的对象，有权决定功能设置，有权决定功能开放、数据接口和相关数据披露的对象和范围。针对以下情形，有权视具体情况中止或终止提供本服务，包括但不限于：</text
+      >
+      <text class="body-text strong">（1）违反法律法规或本协议规定的；</text>
+      <text class="body-text strong">（2）影响服务体验的；</text>
+      <text class="body-text strong">（3）存在安全隐患的；</text>
+      <text class="body-text strong"
+        >（4）与本产品或其服务平台已有主要功能或功能组件相似、相同，或可实现上述功能或功能组件的主要效用的；</text
+      >
+      <text class="body-text strong"
+        >（5）界面、风格、功能、描述或使用者体验与本产品账号或其服务平台类似，可能造成您认为其所使用的功能或服务来源于武汉火炎或经武汉火炎授权的；</text
+      >
+      <text class="body-text strong"
+        >（6）违背本产品或其服务平台运营原则，或不符合武汉火炎其他管理要求的。</text
+      >
+      <text class="body-text strong"
+        >但如您拒绝某项扩展服务，将不会影响本产品基本服务和其他已授权扩展服务的使用或受到限制。</text
+      >
+
+      <text class="sub-title">（三）服务运营规范</text>
+      <text class="body-text strong">您使用本服务过程中不得从事下列行为：</text>
+      <text class="body-text strong"
+        >1、提交、发布虚假信息，或冒充、利用他人名义从事相关活动或作出相关行为；</text
+      >
+      <text class="body-text strong"
+        >2、诱导其他用户点击链接页面或分享信息；</text
+      >
+      <text class="body-text strong"
+        >3、虚构事实、隐瞒真相以误导、欺骗他人；</text
+      >
+      <text class="body-text strong"
+        >4、侵害他人名誉权、肖像权、知识产权、商业秘密等合法权利；</text
+      >
+      <text class="body-text strong"
+        >5、未经武汉火炎书面许可利用本产品账号、任何功能以及第三方运营平台进行推广或互相推广；</text
+      >
+      <text class="body-text strong"
+        >6、利用本产品账号或本产品及服务从事任何违法犯罪活动；</text
+      >
+      <text class="body-text strong"
+        >7、制作、发布与以上行为相关的方法、工具，或对此类方法、工具进行运营或传播，无论这些行为是否为商业目的；</text
+      >
+      <text class="body-text strong"
+        >8、其他违反法律法规规定、侵犯其他用户合法权益、干扰产品正常运营或武汉火炎未明示授权的行为。</text
+      >
+
+      <text class="sub-title">（四）对自己行为负责</text>
+      <text class="body-text strong"
+        >1、您充分了解并同意，根据法律规定及监管部门要求，您需要为自己使用本产品及注册账号下的一切行为负责，包括但不限于您所发表的任何内容、利用本产品及注册账号的行为所作行为以及由此产生的后果负责。您需要对本服务中的内容加以判断，并承担因使用内容而引起的所有风险，包括因对内容的正确性、完整性或实用性的依赖而产生的风险。武汉火炎无法且不会对因前述风险而导致的任何损失或损害承担责任同时本产品也将在相关页面为您尽到合理的提示义务。</text
+      >
+      <text class="body-text strong"
+        >2、您充分了解并保证，在使用本产品前，您已经事先详细阅读本协议及《隐私政策》。</text
+      >
+
+      <text class="sub-title">（五）违约处理</text>
+      <text class="body-text strong"
+        >1、如果武汉火炎发现或收到他人举报或投诉您违反本协议约定的，经核实确有违约行为的，武汉火炎有权不经通知随时对相关内容进行删除、屏蔽，并视行为情节对违规账号处以包括但不限于警告、限制或禁止使用部分或全部功能、账号封禁直至注销的处罚，并公告处理结果。</text
+      >
+      <text class="body-text strong"
+        >2、您理解并同意，武汉火炎有权依合理判断对违反有关法律法规或本协议规定的行为进行处罚，对违法违规的任何用户采取适当的法律行动，并依据法律法规保存有关信息向有关部门报告等，您应承担由此产生的法律责任。</text
+      >
+      <text class="body-text strong"
+        >3、您理解并同意，因您违反本协议或相关服务条款的规定，导致或产生第三方主张的任何索赔、要求或损失，您应当独立承担责任；因您的违约行为导致武汉火炎因此遭受损失的，您也应当一并赔偿。</text
+      >
+      <text class="body-text strong"
+        >4、除上述责任外，武汉火炎仍有权要求您改正或直接采取一切必要的措施（包括但不限于更改或删除您在本产品及其服务平台发表的内容等、暂停或终止您使用本产品的权利等）以减轻您不当行为造成的影响。因此造成武汉火炎损失的，武汉火炎有权要求您给予相应的赔偿，包括但不限于武汉火炎被国家机关予以行政处罚或者被第三方通过诉讼或其他方式而支付罚款、经济赔偿、以及为此而支付的相应诉讼费/仲裁费、律师费、差旅费、保全费、公证费、调查取证费等一切费用。</text
+      >
+    </div>
+
+    <!-- 十一、广告 -->
+    <div class="section">
+      <text class="section-title">十一、【广告】</text>
+      <text class="body-text"
+        >（一）您同意，武汉火炎可以在提供服务的过程中自行或由第三方广告商向您发送广告、推广或宣传信息（包括商业与非商业信息），其方式和范围可不经向您特别通知而变更，但短信通知除外。</text
+      >
+      <text class="body-text"
+        >（二）武汉火炎可能为您提供选择关闭广告信息的功能，<text class="strong"
+          >但任何时候您都不得以本协议未明确约定或武汉火炎未书面许可的方式屏蔽、过滤广告信息。</text
+        ></text
+      >
+      <text class="body-text"
+        >（三）武汉火炎将严格依照法律法规的有关规定，仅对进入"武汉火炎"等平台的广告商主体资格进行严格的审查和监督，因审查和监督能力有限，武汉火炎不负责、不保证、不承诺广告商所发布的广告信息的真实性和可靠性，<text
+          class="strong"
+          >如您依该广告信息进行了交易，或依广告内容参与了相关活动，您应当尽到合理的注意义务，自行判断广告信息的真实性并为自己的判断行为负责。除法律明确规定外，您同意，您因依该广告信息进行的交易或前述广告商提供的内容而遭受的损失或损害，您可自行联系第三方广告商要求承担赔偿责任，或联系武汉火炎介入，武汉火炎将为您提供必要条件，积极配合您向第三方追责。</text
+        ></text
+      >
+      <text class="body-text strong"
+        >（四）您同意，对本产品服务中出现的广告信息，您应审慎判断其真实性和可靠性，除法律明确规定外，您应对依该广告信息进行的交易负责。</text
+      >
+    </div>
+
+    <!-- 十二、不可抗力和其他免责事由 -->
+    <div class="section">
+      <text class="section-title">十二、【不可抗力和其他免责事由】</text>
+      <text class="body-text"
+        >（一）本产品不保证为向用户提供便利而设置的外部链接的准确性和完整性，同时，<text
+          class="strong"
+          >对于该外部链接指向的不由本产品实际控制的任何网页上的内容，本产品不承担任何责任</text
+        >。</text
+      >
+      <text class="body-text"
+        >（二）<text class="strong"
+          >您明确并同意其使用本产品服务产生的一切后果由其本人承担，对非因本产品原因导致的风险和损失，本产品不承担任何责任。</text
+        ></text
+      >
+      <text class="body-text"
+        >（三）因违法或不当使用本产品及服务而导致的任何责任或所造成的任何损失，本产品不予承担。</text
+      >
+      <text class="body-text"
+        >（四）<text class="strong"
+          >您理解并同意，在使用本产品服务的过程中，可能会遇到不可抗力等风险因素，使本产品服务发生中断。</text
+        >不可抗力是指不能预见、不能克服并不能避免且对一方或双方造成重大影响的客观事件，包括但不限于自然灾害如洪水、地震、瘟疫流行和风暴等以及社会事件如战争、动乱、政府行为等。<text
+          class="strong"
+          >出现上述情况时，武汉火炎将努力在第一时间与相关单位配合，及时进行修复，由此给您造成的损失，武汉火炎将在法律允许的范围内免责。</text
+        ></text
+      >
+      <text class="body-text"
+        >（五）对于因不可抗力或因黑客攻击、通讯线路中断等本产品不能控制的原因造成的网络服务中断或其他缺陷，导致用户不能正常使用本产品，本产品不承担任何责任，但将尽力减少因此给用户造成的损失或影响。</text
+      >
+      <text class="body-text"
+        >（六）本声明未涉及的问题请参见国家有关法律法规，当本声明与国家有关法律法规冲突时，以国家法律法规为准。</text
+      >
+      <text class="body-text"
+        >（七）本产品上会发布广告，也会为您提供一些移动应用、第三方服务的链接。上述广告、移动应用、第三方服务等所指向产品、第三方内容和服务均来自于第三方。本产品只作为一个平台进行分享，武汉火炎不对其承担任何保证责任。</text
+      >
+      <text class="body-text"
+        >（八）<text class="strong"
+          >您在使用本产品中第三方提供的产品和/或服务时，除遵守本协议约定外，还应遵守第三方的用户协议。</text
+        >您和第三方对可能出现的纠纷在法律规定和约定的范围内各自承担责任，武汉火炎不承担任何责任。</text
+      >
+      <text class="body-text strong"
+        >（九）鉴于网络服务的特殊性，您同意本产品根据实际情况变更、中断或终止部分或全部的网络服务。如变更、中断或终止的网络服务属于免费网络服务，本产品账号无必需通知您的义务。</text
+      >
+      <text class="body-text strong"
+        >（十）请您理解，本产品账号需要定期或不定期地对提供网络服务的平台或相关的设备进行检修或者维护，如因此类情况而造成收费网络服务在合理时间内的中断，但本产品账号将尽可能事先进行通告。</text
+      >
+      <text class="body-text strong"
+        >（十一）武汉火炎始终在不断更改和改进服务。我们可能会增加或删除功能，也可能暂停或彻底停止某项服务。您可以随时停止使用我们的服务，尽管我们对此表示非常遗憾。武汉火炎也可能随时停止向您提供服务，或随时对我们的服务增加或设置新的限制。如果武汉火炎停止某项服务，在合理可能的情况下，我们会向您发出合理的提前通知，并让您有机会在使用本产品及服务过程中知悉该信息。</text
+      >
+      <text class="body-text strong"
+        >（十二）本产品账号不提供以下保证（包括但不限于）：</text
+      >
+      <text class="body-text strong">1、本产品账号适合您的使用要求；</text>
+      <text class="body-text strong"
+        >2、本产品账号不受干扰，及时、安全、可靠或不出现错误；</text
+      >
+      <text class="body-text strong"
+        >3、您使用经由本产品账号下载或取得的任何资料，应尽到合理的注意义务，否则您可能承担因该等使用导致您终端设备的系统损坏或资料流失的风险。</text
+      >
+    </div>
+
+    <!-- 十三、损害赔偿 -->
+    <div class="section">
+      <text class="section-title">十三、【损害赔偿】</text>
+      <text class="body-text"
+        >（一）您理解与同意，在使用本网站和武汉火炎的产品、程序及服务，应当遵守相关法律法规的规定和公序良俗原则，不得侵害任何第三方的合法权益，避免武汉火炎因您的下述行为或其他行为遭受来自第三方的任何投诉、诉讼、损失、损害、责任、成本和费用（包括但不限于武汉火炎被国家机关予以行政处罚或者被第三方通过诉讼或其他方式而支付罚款、经济赔偿、以及为此而支付的相应诉讼费/仲裁费、律师费、差旅费、保全费、公证费、调查取证费等一切费用）：</text
+      >
+      <text class="body-text"
+        >1、您使用本网站和武汉火炎的产品、程序及服务的行为；</text
+      >
+      <text class="body-text">2、您的用户内容；</text>
+      <text class="body-text">3、您违反本协议的行为；</text>
+      <text class="body-text">4、其他您违反法律法规的行为。</text>
+      <text class="body-text"
+        >（二）用户内容是指该用户下载、发布或以其他方式使用本网站与武汉火炎的产品、程序及服务时产生的所有内容（例如：您的信息、图片、音乐或其他内容）；您是您的用户内容唯一的责任人，您将承担因您的用户内容披露而导致的您或任何第三方被识别的风险。</text
+      >
+      <text class="body-text"
+        >（三）您理解与同意，除非获得武汉火炎书面同意，在您与武汉火炎共同对第三方提起的诉讼、仲裁、磋商中双方应保持行动一致。武汉火炎将尽合理努力将此类诉讼、诉讼行为或进程通知您。</text
+      >
+      <text class="body-text strong"
+        >（四）如因您不当访问、使用本网站和武汉火炎的产品、程序及服务，您将承担所产生的损坏计算机系统或移动通讯设备数据库的风险。</text
+      >
+    </div>
+
+    <!-- 十四、知识产权声明 -->
+    <div class="section">
+      <text class="section-title">十四、【知识产权声明】</text>
+      <text class="body-text"
+        >（一）本产品由武汉火炎开发。本产品的一切版权等知识产权，以及与软件相关的所有信息内容，包括但不限于：文字表述及其组合、图标、图饰、图表、色彩、界面设计、版面框架、有关数据、印刷材料、或电子文档等均为武汉火炎所有，受著作权法和国际著作权条约以及其他知识产权法律法规的保护。</text
+      >
+      <text class="body-text"
+        >（二）本产品服务中所涉及的图形、文字或其组成，以及其他本公司标志及产品、服务名称等涉及到的知识产权，均为本公司所有或取得授权。未经本公司事先书面同意，您不得将本公司标识以任何方式展示或使用或作其他处理，也不得向他人表明您有权展示、使用、或其他有权处理本公司标识的行为。</text
+      >
+      <text class="body-text"
+        >（三）未经武汉火炎或相关权利人书面同意，您不得为任何商业或非商业目的自行或许可任何第三方实施、利用、转让上述知识产权。</text
+      >
+      <text class="body-text"
+        >（四）您理解并同意武汉火炎有权为实现产品及服务目的，对您发布的特定公开非保密内容在法律允许的范围内进行使用。</text
+      >
+    </div>
+
+    <!-- 十五、终端安全责任 -->
+    <div class="section">
+      <text class="section-title">十五、【终端安全责任】</text>
+      <text class="body-text"
+        >（一）<text class="strong"
+          >您理解并同意，本产品同大多数互联网软件一样，可能会受多种因素影响，包括但不限于用户原因、网络服务质量、社会环境等；也可能会受各种安全问题的侵扰，包括但不限于他人非法利用用户资料，进行现实中的骚扰；您下载安装的其他软件或访问的其他网站中可能含有病毒、木马程序或其他恶意程序，威胁您的终端设备信息和数据安全，继而影响本软件的正常使用等。因此，您应加强信息安全及个人信息的保护意识，注意账号信息保护，以免遭受损失。</text
+        ></text
+      >
+      <text class="body-text"
+        >（二）您不得制作、发布、使用、传播用于窃取本软件账号及他人个人信息、财产的恶意程序。</text
+      >
+      <text class="body-text strong"
+        >（三）维护软件安全与正常使用是武汉火炎和您的共同责任，武汉火炎将按照行业标准合理审慎地采取必要技术措施保护您的终端设备信息和数据安全。</text
+      >
+      <text class="body-text strong"
+        >（四）在任何情况下，您不应轻信借款、索要账号信息或其他涉及财产的网络信息。涉及财产操作的，请一定先核实对方身份，并请经常留意武汉火炎有关防范诈骗犯罪的提示。</text
+      >
+    </div>
+
+    <!-- 十六、第三方软件或技术 -->
+    <div class="section">
+      <text class="section-title">十六、【第三方软件或技术】</text>
+      <text class="body-text"
+        >（一）本产品可能会使用第三方软件或技术（包括本产品可能使用的开源代码和公共领域代码等，下同），这种使用已经获得合法授权。</text
+      >
+      <text class="body-text"
+        >（二）本产品如果使用了第三方的软件或技术，武汉火炎将按照相关法规或约定，对相关的协议或其他文件，可能通过本协议附件、在本产品安装包特定文件夹中打包、或通过开源软件页面等形式进行展示，它们可能会以"软件使用许可协议"、"授权协议"、"开源代码许可证"或其他名称来表达。前述通过各种形式展现的相关协议、其他文件及网页，均是本协议不可分割的组成部分，与本协议具有同等的法律效力，您应当遵守这些要求。<text
+          class="strong"
+          >如果您没有遵守这些要求，该第三方或者国家机关可能会对您提起诉讼、罚款或采取其他制裁措施，并要求武汉火炎给予协助，您应当自行承担法律责任。</text
+        ></text
+      >
+      <text class="body-text strong"
+        >（三）如因本产品使用的第三方软件或技术引发的任何纠纷，应由该第三方负责解决，武汉火炎将为您提供必要条件，积极配合您向第三方追责。武汉火炎不对第三方软件或技术提供客服支持，若您需要获取支持，武汉火炎将配合您与第三方联系。</text
+      >
+    </div>
+
+    <!-- 十七、隐私保护 -->
+    <div class="section">
+      <text class="section-title">十七、【隐私保护】</text>
+      <text class="body-text"
+        >武汉火炎提供便捷的途径以供您对提供的信息进行访问、更正、删除、撤回同意；提供异议解决渠道，维护您的合法权益；建立安全影响评估制度与应急处置制度。<text
+          class="strong"
+          >更多的隐私保护可详见《隐私政策》（如您为未成年用户，请点击阅读《儿童版隐私政策》、《儿童个人信息保护规则》）。</text
+        ></text
+      >
+    </div>
+
+    <!-- 十八、权利保护 -->
+    <div class="section">
+      <text class="section-title">十八、【知识产权保护】</text>
+      <text class="body-text"
+        >武汉火炎尊重知识产权，反对并打击侵犯知识产权的行为。任何组织或个人认为武汉火炎提供的产品及服务（如转载文章、发布的信息、武汉火炎相关平台入驻的第三方应用及其发布的信息等）可能侵犯其合法权益的，可以通过邮寄的方式将通知书及证明材料向我司提出书面权利通知，武汉火炎将在收到知识产权权利人合格通知后依法尽快处理，收件信息如下：</text
+      >
+      <text class="body-text">收件人：武汉火炎科技有限公司</text>
+      <text class="body-text"
+        >地址：中国（广西）自由贸易试验区南宁片区社鹃路10号汇通产业园A1栋210号</text
+      >
+      <text class="body-text"
+        >或将通知书及证明材料扫描后通过电子邮件发送至电子邮箱：nanningchenxin2022@163.com</text
+      >
+    </div>
+
+    <!-- 十九、修改与终止 -->
+    <div class="section">
+      <text class="section-title">十九、【修改与终止】</text>
+      <text class="sub-title">（一）修改</text>
+      <text class="body-text strong"
+        >本协议内容允许变更。如果本协议项下的有关条款发生变化，我们可通过您提供的电子邮件或本网站的公告来通知您。变更通知之后，继续使用本网站和武汉火炎的产品、程序及服务则视为您已知晓此类变更并同意受条款其约束</text
+      >
+      <text class="body-text"
+        >武汉火炎保留在任何时候修改、保留或关闭本网站、武汉火炎的产品、程序或任何服务之权利，但会在本网站和武汉火炎产品上提前进行相应的公告，请您及时关注我们发布的公告，避免对您的使用造成不便。</text
+      >
+      <text class="sub-title">（二）终止</text>
+      <text class="body-text strong"
+        >本协议自您接受之日起生效，在您使用本网站和武汉火炎的产品、程序及服务的过程中持续有效，直至依据本协议终止。</text
+      >
+      <text class="body-text"
+        >尽管有上述规定，如果您使用本网站和武汉火炎的产品、程序及服务的时间早于您接受本协议的时间，您在此知晓或应当知晓并同意本协议于您第一次使用本网站和武汉火炎的产品、程序及服务时生效，除非依据本协议提前终止。</text
+      >
+      <text class="sub-title">（三）我们可能会：</text>
+      <text class="body-text"
+        >1、依据法律的规定，保留您使用本网站、武汉火炎的产品、程序及服务、或者本网站账号的权利；无论是否通知，我们将在根据本协议的相关约定及法律规定终止本协议，包括出于善意的相信您违反了我们可接受使用政策或本协议的其他规定。</text
+      >
+      <text class="body-text"
+        >2、不受前款规定所限，如果您侵犯第三人的版权且武汉火炎接到版权所有人或版权所有人的合法代理人的通知后，武汉火炎保留终止本协议的权利。</text
+      >
+      <text class="body-text"
+        >3、任何本网站的更新版本或武汉火炎的产品、程序及服务的未来版本、更新或者其他变更将受到本协议约束。</text
+      >
+    </div>
+
+    <!-- 二十、管辖和法律适用 -->
+    <div class="section">
+      <text class="section-title">二十、【管辖和法律适用】</text>
+      <text class="body-text"
+        >（一）本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。</text
+      >
+      <text class="body-text strong"
+        >（二）若您和武汉火炎之间发生任何纠纷或争议，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交厦门仲裁委员会仲裁。</text
+      >
+    </div>
+
+    <!-- 二十一、其他说明 -->
+    <div class="section">
+      <text class="section-title">二十一、【其他说明】</text>
+      <text class="body-text strong"
+        >（一）您通过本产品使用广告商、外部链接指向的网站或资源或第三方提供的内容或服务时，亦应遵从所适用的附加条款。</text
+      >
+      <text class="body-text strong"
+        >（二）本协议内容，同时包括武汉火炎可能不断发布的关于本服务的相关协议、业务规则等内容，您在使用本产品的某一特定服务时，该服务可能会另有单独的协议、相关业务规则等，该内容一经正式发布，即为本协议不可分割的组成部分，您同样应当遵守。</text
+      >
+      <text class="body-text strong"
+        >（三）如果本协议的任何部分无效或无法执行，此部分应以与适用法律相一致的方式诠释，并尽量反映各方的本来意图，其他条款将继续保留完全的效力。武汉火炎不行使或不执行本协议项下的任何权利或本协议的任何条款，并不构成对该等权利或条款的放弃。您同意，除了本协议中另行明确规定的外，本协议不存在任何第三方受益人。</text
+      >
+      <text class="body-text"
+        >（四）本协议所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本协议涵义解释的依据。对于本协议项下内容，武汉火炎保留最终解释权。</text
+      >
+      <text class="body-text"
+        >（五）本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。</text
+      >
+      <text class="body-text"
+        >（六）本产品相关活动只限中国境内（仅为本协议之目的，为避免疑义，不包括香港特别行政区、澳门特别行政区和台湾地区）武汉火炎用户在境内参与和使用。</text
+      >
+    </div>
+
+    <!-- 二十二、联系方式 -->
+    <div class="section">
+      <text class="section-title">二十二、【联系方式】</text>
+      <text class="body-text strong"
+        >如您对本《用户协议》或其他服务内容有任何疑问或建议的，或发现您的相关信息受到侵害的，请您通过如下方式联系我们，我们会尽快回复。</text
+      >
+      <text class="body-text"
+        >联系地址：湖北省武汉市汉阳区龙阳街陶家岭社区陶家岭5.5产业园综合楼第11层01室</text
+      >
+      <text class="body-text">客服邮箱：yangxinyi@whhuoyan.cn</text>
+    </div>
+  </div>
+</template>
+
+<script>
+import manifest from '../../manifest.json'
+
+export default {
+  data() {
+    return {
+      productname: ""
+    }
+  },
+  onInit() {
+    this.productname = manifest.name
+  },
+  methods: {}
+}
+</script>
+
+<style>
+.agreement-wrapper {
+  padding: 24px 20px 40px;
+  background-color: #ffffff;
+  color: #1e1e1e;
+  font-size: 15px;
+  flex-direction: column;
+}
+.main-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.toc {
+  margin-bottom: 24px;
+  flex-direction: column;
+}
+.toc-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #000000;
+}
+.toc-item {
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 2px;
+}
+.section {
+  margin-bottom: 24px;
+  flex-direction: column;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+.sub-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #000000;
+}
+.body-text {
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+.strong {
+  font-weight: 700;
+  color: #000000;
+}
+.underline {
+  text-decoration: underline;
+}
+.em-underline {
+  font-style: italic;
+  text-decoration: underline;
+}
+.strong-em-underline {
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  color: #000000;
+}
+.strong-underline {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000000;
+}
+.em {
+  font-style: italic;
+}
+.link {
+  color: #0055cc;
+  text-decoration: underline;
+}
+</style>

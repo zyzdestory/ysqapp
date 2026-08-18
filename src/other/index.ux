@@ -1,0 +1,411 @@
+<template>
+  <div class="knowledge-wrapper">
+    <div class="header">
+      <text class="title">烹饪知识</text>
+      <text class="subtitle">掌握技巧，轻松下厨</text>
+    </div>
+
+    <div class="tab-container">
+      <div
+        class="tab-item {{activeTab === 'tips'?'active':''}}"
+        @click="btnclcik('tips')"
+      >
+        <text class="tab-icon">💡</text>
+        <text class="tab-text {{activeTab === 'tips'?'activetext':''}}"
+          >做菜小妙招</text
+        >
+      </div>
+      <div
+        class="tab-item {{activeTab === 'notes'?'active':''}}"
+        @click="btnclcik('notes')"
+      >
+        <text class="tab-icon">⚠️</text>
+        <text class="tab-text {{activeTab === 'notes'?'activetext':''}}"
+          >注意事项</text
+        >
+      </div>
+    </div>
+
+    <list class="content-area" if="{{activeTab === 'tips'}}">
+      <list-item type="listitem" for="(idx,tip) in tips">
+        <div class="tip-card">
+          <div class="tip-icon">{{ tip.icon }}</div>
+          <div class="tip-content">
+            <text class="tip-title">{{ tip.title }}</text>
+            <text class="tip-desc">{{ tip.description }}</text>
+          </div>
+        </div>
+      </list-item>
+    </list>
+    <list class="content-area" if="{{activeTab === 'notes'}}">
+      <list-item type="listitem" for="(idx,note) in notes">
+        <div class="note-card">
+          <div class="note-header">
+            <text class="note-icon">{{ note.icon }}</text>
+            <text class="note-title">{{ note.title }}</text>
+          </div>
+          <div class="note-body">
+            <text class="note-text" for="(i,item) in note.items">{{
+              item
+            }}</text>
+          </div>
+        </div>
+      </list-item>
+    </list>
+  </div>
+</template>
+
+<script>
+export default {
+  data: {
+    activeTab: 'tips',
+    tips: [
+      {
+        icon: '🔥',
+        title: '炒菜火候掌握',
+        description: '热锅冷油是炒菜的关键！先把锅烧至冒烟，再倒入油，这样炒出来的菜色泽鲜艳、口感香脆，还能减少油烟。'
+      },
+      {
+        icon: '🥩',
+        title: '肉类腌制技巧',
+        description: '腌制肉类时，先加少许盐抓匀，再加入料酒、生抽、淀粉。淀粉能锁住水分，让肉质更嫩。'
+      },
+      {
+        icon: '🥚',
+        title: '煎蛋不破秘诀',
+        description: '煎蛋时，在蛋液中加少许温水或牛奶，鸡蛋会更嫩滑。热锅放油后转小火，边缘定型后再翻面。'
+      },
+      {
+        icon: '🧅',
+        title: '切洋葱不流泪',
+        description: '切洋葱前，把洋葱放入冰箱冷藏30分钟，或者在切的时候嘴里含一口水，都能有效防止流泪。'
+      },
+      {
+        icon: '🥔',
+        title: '土豆丝更脆方法',
+        description: '土豆丝切好后放入清水中浸泡10分钟，洗去表面淀粉，炒出来的土豆丝更清脆爽口。'
+      },
+      {
+        icon: '🍅',
+        title: '番茄去皮技巧',
+        description: '在番茄顶部划十字，放入沸水中烫10秒，捞出后过冷水，皮就能轻松撕掉。'
+      },
+      {
+        icon: '🍚',
+        title: '米饭更香秘诀',
+        description: '煮米饭时，加一小勺油或几滴醋，米饭会更蓬松香甜。也可以在米中加入几颗红枣或玉米粒。'
+      },
+      {
+        icon: '🥘',
+        title: '炖肉软烂技巧',
+        description: '炖肉时，先用冷水焯水去除血水，再用开水炖煮。炖的时候加几片山楂或白萝卜，肉质更容易炖烂。'
+      },
+      {
+        icon: '🌶️',
+        title: '辣椒去辣方法',
+        description: '怕辣的话，可以去掉辣椒的籽和白色内膜，或者在炒菜时先放醋，醋能中和一部分辣味。'
+      },
+      {
+        icon: '🥗',
+        title: '凉拌菜更入味',
+        description: '凉拌菜做好后，放入冰箱冷藏1小时再吃，味道会更浓郁。可以提前腌制，让食材充分吸收调料。'
+      },
+      {
+        icon: '🐟',
+        title: '蒸鱼鲜嫩技巧',
+        description: '蒸鱼一定要水开后再上锅，大火蒸制。蒸好后倒掉腥水，再淋热油，这样鱼肉更鲜嫩无腥味。'
+      },
+      {
+        icon: '🍤',
+        title: '虾仁更弹嫩',
+        description: '虾仁洗净后用厨房纸吸干水分，加少许盐和淀粉抓匀，腌制10分钟，炒出来的虾仁更弹牙。'
+      },
+      {
+        icon: '🥬',
+        title: '绿叶菜保绿技巧',
+        description: '炒绿叶菜时，加少许盐和油，大火快炒，时间控制在2分钟以内，能保持蔬菜的翠绿颜色和营养。'
+      },
+      {
+        icon: '🍳',
+        title: '煮面条不粘',
+        description: '煮面条时，水开后加一小勺盐，面条更劲道。煮好后过冷水，面条不会粘连。'
+      },
+      {
+        icon: '🧂',
+        title: '盐的使用时机',
+        description: '炒菜时，盐要分两次加。第一次在菜快熟时加，第二次出锅前加少许提味，这样味道更均匀。'
+      },
+      {
+        icon: '🍯',
+        title: '糖的妙用',
+        description: '炒菜时加少许糖，可以中和酸味，提鲜增香。做红烧肉、糖醋排骨时，糖能让菜的色泽更红亮。'
+      },
+      {
+        icon: '🍷',
+        title: '料酒去腥',
+        description: '料酒最好在炒菜初期加入，让酒气挥发带走腥味。炖肉时加料酒，能让肉质更软烂。'
+      },
+      {
+        icon: '🧄',
+        title: '蒜末爆香技巧',
+        description: '蒜末要在油温不高时放入，小火慢慢炒出香味。如果油温太高，蒜末容易糊，会发苦。'
+      },
+      {
+        icon: '🥛',
+        title: '牛奶的妙用',
+        description: '煮土豆时加少许牛奶，土豆会更绵密。做汤时加牛奶，汤汁更浓郁顺滑。'
+      },
+      {
+        icon: '🍋',
+        title: '柠檬汁提鲜',
+        description: '做海鲜或肉类时，挤几滴柠檬汁，既能去腥，又能增加清新口感。'
+      }
+    ],
+    notes: [
+      {
+        icon: '⚡',
+        title: '厨房安全',
+        items: [
+          '烹饪时不要离开厨房，防止油锅起火或水烧干。',
+          '热油中不要加水，以免油溅出烫伤。',
+          '刀具要妥善保管，锋利面朝向内侧。',
+          '使用电器时要注意防水，用完及时断电。',
+          '燃气使用完毕要关闭阀门，定期检查软管是否漏气。'
+        ]
+      },
+      {
+        icon: '🥩',
+        title: '肉类处理',
+        items: [
+          '生熟肉要分开处理，避免交叉污染。',
+          '肉类一定要彻底煮熟，尤其是猪肉、牛肉。',
+          '解冻肉类最好放在冰箱冷藏，不要在室温下解冻。',
+          '切肉的案板和刀具要定期消毒。',
+          '剩余的熟肉要及时冷藏，再次食用前要彻底加热。'
+        ]
+      },
+      {
+        icon: '🥬',
+        title: '蔬菜处理',
+        items: [
+          '蔬菜要彻底清洗，去除农药残留。',
+          '绿叶蔬菜不宜长时间浸泡，以免营养流失。',
+          '根茎类蔬菜要刮去外皮，尤其是土豆、红薯等。',
+          '蔬菜要现切现炒，避免长时间暴露在空气中。',
+          '发霉变质的蔬菜不要食用，以免引起食物中毒。'
+        ]
+      },
+      {
+        icon: '🥚',
+        title: '蛋类处理',
+        items: [
+          '鸡蛋要轻拿轻放，避免破裂。',
+          '鸡蛋要煮熟煮透，不要吃溏心蛋。',
+          '蛋壳有裂纹或发霉的鸡蛋不要食用。',
+          '打蛋前要清洗蛋壳，避免细菌进入蛋液。',
+          '蛋液要彻底搅打均匀，尤其是做蛋糕时。'
+        ]
+      },
+      {
+        icon: '🧂',
+        title: '调味品使用',
+        items: [
+          '盐要适量，过量食用对健康有害。',
+          '酱油、醋等调味品开封后要冷藏保存。',
+          '辣椒酱、豆瓣酱等要密封保存，防止发霉。',
+          '使用调味品时要注意保质期，过期的不要食用。',
+          '烹饪时要少放味精、鸡精等添加剂。'
+        ]
+      },
+      {
+        icon: '🍳',
+        title: '烹饪器具',
+        items: [
+          '不粘锅不要用铁铲，以免刮伤涂层。',
+          '铁锅用完要擦干水分，防止生锈。',
+          '高压锅使用时要检查安全阀是否通畅。',
+          '微波炉不要加热金属容器或带壳的鸡蛋。',
+          '餐具要定期消毒，保持清洁卫生。'
+        ]
+      },
+      {
+        icon: '🍽️',
+        title: '食材储存',
+        items: [
+          '食材要分类储存，生熟分开。',
+          '肉类要密封后放入冷冻室，避免串味。',
+          '蔬菜要擦干水分后放入保鲜袋，再放入冰箱。',
+          '水果和蔬菜最好分开存放，以免加速腐烂。',
+          '干货要放在干燥通风的地方，防止受潮发霉。'
+        ]
+      },
+      {
+        icon: '🍲',
+        title: '健康饮食',
+        items: [
+          '饮食要均衡，荤素搭配。',
+          '少油少盐，保持清淡口味。',
+          '多吃新鲜蔬菜和水果，补充维生素。',
+          '适量摄入粗粮，增加膳食纤维。',
+          '多喝水，少喝含糖饮料。'
+        ]
+      }
+    ]
+  },
+  btnclcik(item) {
+    this.activeTab = item
+  }
+
+}
+</script>
+
+<style lang="less">
+@import '../assets/styles/style.less';
+
+.knowledge-wrapper {
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  padding: 60px 30px 30px;
+  flex-direction: column;
+
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.tab-container {
+  display: flex;
+  background-color: #fff;
+  margin: -20px 20px 20px;
+  border-radius: 15px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .tab-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+    .tab-icon {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .tab-text {
+      font-size: 28px;
+      color: #666;
+    }
+    .activetext {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  .active {
+    background-color: #4ecdc4;
+  }
+}
+
+.content-area {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.tips-list {
+  flex-direction: column;
+}
+
+.tip-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  .tip-icon {
+    font-size: 48px;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  .tip-content {
+    flex: 1;
+    flex-direction: column;
+
+    .tip-title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .tip-desc {
+      font-size: 26px;
+      color: #666;
+    }
+  }
+}
+
+.notes-list {
+  flex-direction: column;
+}
+
+.note-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-direction: column;
+  .note-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .note-icon {
+      font-size: 40px;
+      margin-right: 15px;
+    }
+
+    .note-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .note-body {
+    flex-direction: column;
+    padding-left: 55px;
+
+    .note-text {
+      font-size: 28px;
+      color: #555;
+      padding: 10px 0;
+      border-bottom: 1px dashed #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+</style>

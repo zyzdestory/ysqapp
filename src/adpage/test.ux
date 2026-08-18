@@ -1,0 +1,167 @@
+<template>
+  <div class="wrapper">
+    <text class="title">{{ title }}</text>
+    <text class="status">{{statusText}}</text>
+    <text class="log" for="{{logs}}">{{$item}}</text>
+    <input class="btn" type="button" value="初始化激励视频" onclick="initAd"></input>
+    <input class="btn" type="button" value="展示激励视频" onclick="showAd"></input>
+    <input class="btn" type="button" value="销毁" onclick="destroyAd"></input>
+  </div>
+</template>
+
+<script>
+import prompt from '@system.prompt'
+import rewardedMultiton from '../helper/ad/adRewardedVideoMultiton'
+
+export default {
+  data: {
+    title: '激励视频多例模式测试',
+    statusText: '未初始化',
+    logs: [],
+    rewardVideoAdMultiton: null,
+    currentAdId: '',
+    currentAdUnitId: '',
+    currentPrice: '',
+  },
+
+
+  onInit() { 
+    this.initAd()
+  },
+
+  onReady() { },
+
+  onDestroy() {
+    this.destroyAd()
+  },
+
+  addLog(msg) {
+    this.logs.unshift(msg)
+    if (this.logs.length > 20) this.logs.pop()
+  },
+
+  initAd() {
+    try {
+      this.statusText = '初始化中...'
+      this.addLog('开始初始化激励视频广告')
+
+      this.rewardVideoAdMultiton = new rewardedMultiton.RewardedVideoAdMultiton(
+        ['d36ea226aa964796bdcc3a4b9664d5e6', 'a4a8e08e055644129ec392a6fb6125ef'],
+        {
+          mode: 'sequential',
+          maxRetry: 3,
+          retryInterval: 1000,
+          channel: 'test_channel'
+        }
+      )
+
+
+      this.rewardVideoAdMultiton.on('close', (res) => {
+        this.addLog(`广告关闭: isEnded=${res.isEnded}, hasReward=${res.hasReward}`)
+        prompt.showDialog({
+          title: '广告关闭',
+          message: `isEnded:${res.isEnded}, hasReward:${res.hasReward}, adId:${res.adId}`
+        })
+      })
+
+      this.rewardVideoAdMultiton.on('click', (res) => {
+        this.addLog(`广告点击: adUnitId=${res.adUnitId}, adId=${res.adId}`)
+      })
+
+      this.rewardVideoAdMultiton.init()
+        .then((data) => {
+          this.currentAdId = data.adid || ''
+          this.currentPrice = data.price || ''
+          this.statusText = `初始化成功 - adId: ${this.currentAdId}`
+          this.addLog(`初始化成功: adId=${this.currentAdId}, price=${this.currentPrice}`)
+        })
+        .catch((err) => {
+          this.statusText = '初始化失败'
+          this.addLog(`初始化失败: ${JSON.stringify(err)}`)
+          prompt.showDialog({
+            title: '初始化失败',
+            message: JSON.stringify(err)
+          })
+        })
+    } catch (e) {
+      this.statusText = '初始化异常'
+      this.addLog(`异常: ${JSON.stringify(e)}`)
+    }
+  },
+
+  showAd() {
+    if (!this.rewardVideoAdMultiton) {
+      prompt.showToast({ message: '请先初始化广告' })
+      return
+    }
+
+    const adid = this.currentAdId || (this.rewardVideoAdMultiton.currentAdInfo && this.rewardVideoAdMultiton.currentAdInfo.adId)
+    if (!adid) {
+      prompt.showToast({ message: '无可用广告' })
+      return
+    }
+
+    this.statusText = '展示中...'
+    this.addLog(`尝试展示广告: adId=${adid}`)
+
+    this.rewardVideoAdMultiton.show({ adid })
+      .then(() => {
+        this.statusText = '展示成功'
+        this.addLog('ad.show 成功')
+      })
+      .catch((err) => {
+        this.statusText = '展示失败'
+        this.addLog(`ad.show 失败: ${JSON.stringify(err)}`)
+      })
+  },
+
+  destroyAd() {
+    if (this.rewardVideoAdMultiton) {
+      this.rewardVideoAdMultiton.destroy()
+      this.rewardVideoAdMultiton = null
+      this.currentAdId = ''
+      this.currentAdUnitId = ''
+      this.currentPrice = ''
+      this.statusText = '已销毁'
+      this.addLog('广告实例已销毁')
+    }
+  }
+}
+</script>
+
+<style>
+.wrapper {
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+.title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.info {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.status {
+  font-size: 28px;
+  color: #ff6b35;
+  margin-bottom: 20px;
+}
+.log {
+  font-size: 22px;
+  color: #999;
+  margin-bottom: 4px;
+}
+.btn {
+  width: 500px;
+  height: 80px;
+  margin-top: 20px;
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 32px;
+}
+</style>

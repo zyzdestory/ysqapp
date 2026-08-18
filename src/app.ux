@@ -1,0 +1,24 @@
+<script>
+/**
+ * 应用级别的配置，供所有页面公用
+ */
+import "./global.js";
+
+const $utils = require('./helper/utils').default
+const $apis = require('./helper/apis').default
+const $ad = require('./helper/ad').default
+
+/* @desc: 注入方法至全局 global,以便页面调用 */
+const hook2global = global.__proto__ || global
+hook2global.$utils = $utils
+hook2global.$apis = $apis
+hook2global.$ad = $ad
+
+export default {
+  onCreate() {
+    if ($ad && $ad.ensureInit) {
+      $ad.ensureInit()
+    }
+  }
+}
+</script>

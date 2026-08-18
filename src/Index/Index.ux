@@ -1,0 +1,255 @@
+<template>
+  <div class="recipe-wrapper">
+    <div class="header">
+      <text class="title">美食食谱</text>
+      <text class="subtitle">发现美味，轻松下厨</text>
+    </div>
+
+    <div class="search-bar">
+      <text class="search-icon">🔍</text>
+      <input
+        class="search-input"
+        value="{{searchKeyword}}"
+        placeholder="搜索菜谱"
+        @change="onSearch"
+      />
+    </div>
+
+    <div class="category-tabs">
+      <div
+        class="category-tab {{activeCategory === $item.key?'active':''}}"
+        for="{{categories}}"
+        @click="btnchangenav($item)"
+      >
+        <text
+          class="tab-text {{activeCategory === $item.key?'activetext':''}}"
+          >{{ $item.name }}</text
+        >
+      </div>
+    </div>
+
+    <list class="recipe-list">
+      <list-item
+        type="listitem"
+        for="{{filteredRecipes}}"
+        @click="openDetail($item)"
+      >
+        <div class="recipe-card">
+          <image class="recipe-image" src="{{$item.image}}" mode="aspectFill" />
+          <div class="recipe-info">
+            <text class="recipe-name">{{ $item.name }}</text>
+            <text class="recipe-desc">{{ $item.description }}</text>
+            <div class="recipe-meta">
+              <text class="meta-item">⏱️ {{ $item.time }}</text>
+              <text class="meta-item">👥 {{ $item.servings }}</text>
+            </div>
+            <div class="recipe-tags">
+              <text class="tag" for="{{items in $item.tags}}" :key="tag">{{
+                items
+              }}</text>
+            </div>
+          </div>
+        </div>
+      </list-item>
+    </list>
+  </div>
+</template>
+
+<script>
+import prompt from '@system.prompt'
+    import router from '@system.router'
+import recipes from "../helper/recipes.js"
+export default {
+  data: {
+    title: '美食食谱',
+    activeCategory: 'all',
+    searchKeyword: '',
+    showDetail: false,
+    currentRecipe: {},
+    categories: [
+      { key: 'all', name: '全部' },
+      { key: 'meat', name: '肉类' },
+      { key: 'vegetable', name: '素菜' },
+      { key: 'seafood', name: '海鲜' },
+      { key: 'soup', name: '汤羹' },
+      { key: 'dessert', name: '甜品' }
+    ],
+    recipes:[]
+  },
+  computed: {
+    filteredRecipes() {
+      let result = this.recipes
+      if (this.activeCategory !== 'all') {
+        result = result.filter(r => r.category === this.activeCategory)
+      }
+      if (this.searchKeyword) {
+        const keyword = this.searchKeyword.toLowerCase()
+        result = result.filter(r => r.name.toLowerCase().includes(keyword) || r.description.toLowerCase().includes(keyword))
+      }
+      return result
+    }
+  },
+  onInit() {
+    this.recipes=recipes
+  },
+  btnchangenav(item) {
+    this.activeCategory = item.key
+  },
+  onSearch(e) {
+    this.searchKeyword = e.text
+  },
+  openDetail(recipe) {
+    this.showDetail = true
+    router.push({
+      uri:'/detail',
+      params:{
+        recipe
+      }
+    })
+  },
+  handleclose() {
+    this.showDetail = false
+  }
+}
+</script>
+
+<style lang="less">
+@import '../assets/styles/style.less';
+
+.recipe-wrapper {
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  padding: 60px 30px 30px;
+  flex-direction: column;
+
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin: -20px 20px 20px;
+  border-radius: 50px;
+  padding: 15px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .search-icon {
+    font-size: 32px;
+    margin-right: 15px;
+  }
+
+  .search-input {
+    flex: 1;
+    font-size: 28px;
+    color: #333;
+  }
+}
+
+.category-tabs {
+  display: flex;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+
+  .category-tab {
+    padding: 12px 25px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-right: 15px;
+    white-space: nowrap;
+
+    .tab-text {
+      font-size: 26px;
+      color: #666;
+    }
+
+    .activetext {
+      color: #fff;
+    }
+  }
+  .active {
+    background-color: #ff6b6b;
+  }
+}
+
+.recipe-list {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex-direction: column;
+  .recipe-image {
+    width: 100%;
+    object-fit: cover;
+    /* height: 280px; */
+  }
+
+  .recipe-info {
+    padding: 20px;
+    flex-direction: column;
+    .recipe-name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .recipe-desc {
+      font-size: 26px;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .recipe-meta {
+      display: flex;
+      margin-bottom: 12px;
+
+      .meta-item {
+        font-size: 24px;
+        color: #666;
+        margin-right: 20px;
+      }
+    }
+
+    .recipe-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tag {
+        font-size: 22px;
+        color: #ff6b6b;
+        background-color: #ffeaea;
+        padding: 6px 15px;
+        border-radius: 20px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+</style>

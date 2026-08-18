@@ -1,0 +1,126 @@
+<import name="Indexpage" src="../Index/Index.ux"></import>
+<import name="my" src="../my/index.ux"></import>
+<import name="otherpage" src="../other/index.ux"></import>
+<import name="primarypage" src="../primary/index.ux"></import>
+ 
+<template>
+  <div class="wrapper">
+    <tabs class="tabs">
+      <tab-content class="tabcontent">
+        <Indexpage if="{{ischangenav==0}}"></Indexpage>
+        <otherpage if="{{ischangenav==1}}"></otherpage>
+        <my if="{{ischangenav==2}}"></my>
+      </tab-content>
+      <tab-bar mode="fixed" class="tabbar">
+        <div class="tabbar-item" @click="switchTab(0)">
+          <text class="tab-icon">🍳</text>
+          <text class="tab-text">首页</text>
+        </div>
+        <div class="tabbar-item" @click="switchTab(1)">
+          <text class="tab-icon">📚</text>
+          <text class="tab-text">知识</text>
+        </div>
+        <div class="tabbar-item" @click="switchTab(2)">
+          <text class="tab-icon">👤</text>
+          <text class="tab-text">我的</text>
+        </div>
+      </tab-bar>
+    </tabs>
+    <primarypage
+      if="{{isShowPop}}"
+      @handleargeen="agreen()"
+      class="notice"
+    ></primarypage>
+  </div>
+</template>
+
+<script>
+export default {
+  data: {
+    title: '美食食谱',
+    ischangenav: 0,
+    isShowPop: false
+  },
+
+  onInit() {
+    this.getAppCache()
+
+  },
+  agreen() {
+    $utils.localStore.setItem('isAgree', true)
+    this.isShowPop = false
+  },
+  // 获取缓存
+  getAppCache() {
+    $utils.localStore.getItem('isAgree', (res) => {
+      if (res) {
+        this.isShowPop = false
+      } else {
+        this.isShowPop = true
+      }
+    })
+  },
+
+
+  onReady() { },
+
+  onDestroy() { },
+
+  switchTab(index) {
+    this.ischangenav = index
+    this.$page.setTabBarItem({
+      index: index,
+      badgeText: ''
+    })
+  }
+}
+</script>
+
+<style lang="less">
+.wrapper {
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+}
+.notice {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.tabs {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+
+  .tabcontent {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+
+  .tabbar {
+    height: 100px;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+
+    .tabbaritem {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .tab-icon {
+        font-size: 36px;
+        margin-bottom: 5px;
+      }
+
+      .tab-text {
+        font-size: 22px;
+        color: #666;
+      }
+    }
+  }
+}
+</style>
