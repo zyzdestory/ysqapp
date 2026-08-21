@@ -1,8 +1,8 @@
 {
   "package": "com.yushizhinan.ysqapp",
   "name": "聿食指南",
-  "versionName": "1.0.2",
-  "versionCode": 2,
+  "versionName": "1.0.3",
+  "versionCode": 3,
   "minPlatformVersion": 1070,
   "icon": "/assets/images/logo.png",
   "features": [

@@ -78,6 +78,7 @@ export default {
   },
   onInit(options) {
     this.options = options
+    
     // 将 options 存储到全局，供数据埋点使用
     setGlobalData('channel', options.channelId)
     setGlobalData('adOptions', options)
@@ -163,7 +164,6 @@ export default {
       channel_id: channelId,
       media_id: mediaId
     })
-  
     $apis.api.fetchPromotionConfig({ channelId, mediaId })
       .then(data => {
         if (data.id) {

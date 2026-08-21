@@ -8,6 +8,8 @@ const DEFAULT_OPTIONS = {
   type: 'adView'
 }
 
+let nativeAdIndex = 0
+
 function preloadNativeAds(adUnitIds, options = {}) {
   return new Promise((resolve, reject) => {
     if (!adUnitIds || !Array.isArray(adUnitIds) || adUnitIds.length === 0) {
@@ -21,7 +23,7 @@ function preloadNativeAds(adUnitIds, options = {}) {
     const failedIds = []
     let completed = 0
     let resolved = false
- 
+
     if (maxCount <= 0) {
       reject({
         error: 'maxCount is 0',
@@ -102,7 +104,12 @@ function preloadNativeAds(adUnitIds, options = {}) {
       })
     }
 
-    const idsToUse = adUnitIds.slice(0, maxCount)
+    const startIndex = nativeAdIndex % adUnitIds.length
+    const idsToUse = []
+    for (let i = 0; i < maxCount; i++) {
+      idsToUse.push(adUnitIds[(startIndex + i) % adUnitIds.length])
+    }
+    nativeAdIndex = (startIndex + maxCount) % adUnitIds.length
     let timeoutId = null
     let totalToComplete = idsToUse.length
 
